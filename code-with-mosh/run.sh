@@ -6,7 +6,7 @@ title() {
 
 case "$1" in
 
-  "d" | "dev" | "")
+  "dev" | "")
     title "yarn start"
     yarn start
   ;;
@@ -14,6 +14,12 @@ case "$1" in
   "p" | "prod" | "production")
     title "export NODE_ENV=production && yarn start"
     export NODE_ENV=production
+    yarn start
+  ;;
+
+  "d" | "debug")
+    title "export DEBUG=app:startup,app:db && yarn start"
+    export DEBUG=app:startup
     yarn start
   ;;
 

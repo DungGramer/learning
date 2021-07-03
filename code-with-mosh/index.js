@@ -1,3 +1,4 @@
+const debug = require('debug')('app:startup');
 const config = require("config");
 const morgan = require("morgan");
 const helmet = require("helmet");
@@ -5,6 +6,10 @@ const Joi = require("joi");
 const express = require("express");
 const logger = require("./logger");
 const app = express();
+
+app.set('view engine', 'pug');
+app.set('views', './views'); //default folder
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); //key=value&a=b
@@ -18,7 +23,9 @@ console.log("Mail server: ", config.get("mail.host"));
 // Chỉ chạy ở môi trường đev
 if (app.get("env") === "development") {
   app.use(morgan("tiny"));
+  debug('Morgan enabled...');
 }
+
 
 app.use(logger);
 
@@ -27,6 +34,13 @@ const genres = [
   { id: 2, name: "Horror" },
   { id: 3, name: "Romance" },
 ];
+
+app.get('/', (req, res) => {
+  res.render('index', {
+    title: 'My Express App',
+    message: 'Hello'
+  })
+})
 
 app.get("/api/genres", (req, res) => {
   res.send(genres);
