@@ -4,6 +4,10 @@ title() {
   echo -e "\e[1;97;44m$1\e[0m"
 }
 
+killPort() {
+  pid=$(netstat -aon | findstr $1 | tail -n1 | awk '{print $5}') && taskkill //PID $pid //F
+}
+
 case "$1" in
 
   "dev" | "")
@@ -21,6 +25,11 @@ case "$1" in
     title "export DEBUG=app:startup,app:db && yarn start"
     export DEBUG=app:startup
     yarn start
+  ;;
+
+  "k" | "kill")
+    title "Kill port $2"
+    killPort "$2"
   ;;
 
   *)
