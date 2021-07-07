@@ -5,9 +5,11 @@ const morgan = require("morgan");
 const app = express();
 const handlebars = require("express-handlebars");
 
-const port = process.env.PORT || 3000;
+const route = require("./routes");
 
-app.use(express.static(path.join(__dirname, 'public')))
+const port = process.env.PORT || 9561;
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.json());
 
@@ -30,79 +32,8 @@ app.engine(
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "resources/views"));
 
-app.get("/api/posts/:year/:month", (req, res) => {
-  res.send(req.params);
-});
-
-app.get("/api/courses/:id", (req, res) => {
-  const course = courses.find((c) => c.id === parseInt(req.params.id));
-  if (!course)
-    res.status(404).send("The course with the given ID was not found");
-  res.send(course);
-});
-
-app.post("/api/courses", (req, res) => {
-  const { error } = validateCourse(req.body);
-
-  if (error) {
-    res.status(400).send(result.error.details[0].message);
-    return;
-  }
-
-  const course = {
-    id: courses.length + 1,
-    name: req.body.name,
-  };
-  courses.push(course);
-  res.send(course);
-});
-
-app.get("/", (req, res) => {
-  res.render("home", {
-    title: "home",
-  });
-});
-
-app.get("/news", (req, res) => {
-  res.render("news", {
-    title: "news",
-  });
-});
-
-app.put("/api/courses/:id", (req, res) => {
-  const course = courses.find((c) => c.id === parseInt(req.params.id));
-  if (!course)
-    res.status(404).send("The course with the given ID was not found");
-
-  const { error } = validateCourse(req.body);
-
-  if (error) {
-    res.status(400).send(result.error.details[0].message);
-    return;
-  }
-
-  course.name = req.body.name;
-  res.send(course);
-});
-
-app.delete("/api/courses/:id", (req, res) => {
-  const course = courses.find((c) => c.id === parseInt(req.params.id));
-  if (!course)
-    res.status(404).send("The course with the given ID was not found");
-
-  const index = courses.indexOf(course);
-  courses.splice(index, 1);
-
-  res.send(course);
-});
-
-function validateCourse(course) {
-  const schema = {
-    name: Joi.string().min(3).required(),
-  };
-
-  return Joi.validate(course, schema);
-}
+// Route
+route(app);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
