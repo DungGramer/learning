@@ -1,46 +1,47 @@
 {
-  "name": "learn-node",
-  "version": "1.0.0",
-  "description": "learn nodejs in F8",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "nodemon --inspect src/index.js",
-    "watch": "node-sass --watch src/resources/scss/ -o src/public/css/",
-    "beautiful": "lint-staged"
-  },
-  "lint-staged": {
-    "**/*.+(js|json|scss)": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "learn-node",
+    "version": "1.0.0",
+    "description": "learn nodejs in F8",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "nodemon --inspect src/index.js",
+        "watch": "node-sass --watch src/resources/scss/ -o src/public/css/",
+        "beautiful": "lint-staged",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "**/*.+(js|json|scss)": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DungGramer/learn-node.git"
+    },
+    "keywords": [
+        "nodejs",
+        "expressjs"
+    ],
+    "author": "DungGramer",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DungGramer/learn-node/issues"
+    },
+    "homepage": "https://github.com/DungGramer/learn-node#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^5.3.2",
+        "joi": "^17.4.0"
+    },
+    "devDependencies": {
+        "husky": "^4.3.8",
+        "lint-staged": "^11.0.0",
+        "morgan": "^1.10.0",
+        "node-sass": "^6.0.1",
+        "nodemon": "^2.0.7",
+        "prettier": "^2.3.2"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DungGramer/learn-node.git"
-  },
-  "keywords": [
-    "nodejs",
-    "expressjs"
-  ],
-  "author": "DungGramer",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DungGramer/learn-node/issues"
-  },
-  "homepage": "https://github.com/DungGramer/learn-node#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.3.2",
-    "joi": "^17.4.0"
-  },
-  "devDependencies": {
-    "husky": "^7.0.1",
-    "lint-staged": "^11.0.0",
-    "morgan": "^1.10.0",
-    "node-sass": "^6.0.1",
-    "nodemon": "^2.0.7",
-    "prettier": "^2.3.2"
-  }
 }
