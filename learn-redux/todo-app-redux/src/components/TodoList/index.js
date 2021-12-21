@@ -4,13 +4,14 @@ import { addTodo } from "../../redux/actions";
 import Todo from "../Todo";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
-import { todoListSelector } from "../../redux/selectors";
+import { searchTextSelector, todoListSelector } from "../../redux/selectors";
 
 export default function TodoList() {
   const [todoName, setTodoName] = useState();
   const [priority, setPriority] = useState("Medium");
 
   const todoList = useSelector(todoListSelector);
+  const searchText = useSelector(searchTextSelector);
 
   const dispatch = useDispatch();
 
