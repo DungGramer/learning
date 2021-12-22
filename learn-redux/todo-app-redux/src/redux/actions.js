@@ -7,3 +7,8 @@ export const searchFilterChange = (text) => ({
   type: "filter/searchFilterChange",
   payload: text,
 });
+
+export const statusFilterChange = (status) => ({
+  type: "filter/statusFilterChange",
+  payload: status,
+});
