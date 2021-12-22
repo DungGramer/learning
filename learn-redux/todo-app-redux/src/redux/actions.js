@@ -3,9 +3,14 @@ export const addTodo = (data) => ({
   payload: data,
 });
 
-export const searchFilterChange = (text) => ({
+export const toggleTodoStatus = (data) => ({
+  type: "todoList/toggleTodoStatus",
+  payload: data,
+});
+
+export const searchFilterChange = (todoId) => ({
   type: "filter/searchFilterChange",
-  payload: text,
+  id: todoId,
 });
 
 export const statusFilterChange = (status) => ({
