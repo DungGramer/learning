@@ -1,0 +1,45 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "configure-husky": "npx husky install && husky set .husky/pre-commit \"npx --no-install lint-staged\" && husky set .husky/commit-msg \"npx --no-install commitlint --edit '$1'\"",
+    "lint": "npx lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix --cache --no-ignore",
+      "prettier --write .",
+      "git add -A ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DungGramer/learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DungGramer/learning/issues"
+  },
+  "homepage": "https://github.com/DungGramer/learning#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.5",
+    "prettier": "^2.5.1"
+  }
+}
