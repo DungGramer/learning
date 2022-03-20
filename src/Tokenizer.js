@@ -9,11 +9,15 @@ const Spec = [
   //-------------------------------
   // Comments:
 
-  // Single line comment:
+  // Skip single line comment:
   [/^\/\/.*/, null],
 
-  // Multi-line comment:
+  // Skip multi-line comment:
   [/^\/\*[\s\S]*?\*\//, null],
+
+  //-------------------------------
+  // Symbols, delimiters:
+  [/^;/, ';'],
 
   //-------------------------------
   // Numbers:
