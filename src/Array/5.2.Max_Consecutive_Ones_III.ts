@@ -25,4 +25,4 @@ function longestOnes(nums: Array<number>, k: number): number {
 }
 
 export default longestOnes;
-exports { longestOnes };
+exports.longestOnes = longestOnes;
