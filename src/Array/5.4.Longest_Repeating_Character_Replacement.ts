@@ -4,16 +4,16 @@ function characterReplacement(s: string, k: number): number {
   // Keep count of all the characters in the string
   const chars: { [key: string]: number } = {};
   // left pointer, character with the current max frequency, return value
-  let left = 0,
-    maxf = 0,
-    output = 0;
+  let left = 0;
+  let maxf = 0;
+  let output = 0;
   for (let right = 0; right < s.length; right++) {
     const char = s[right];
     // Increment count of the current character
     chars[char] = 1 + (chars[char] || 0);
     // Update the character frequency
     maxf = Math.max(maxf, chars[char]);
-    // Shrink the window of characters we are looking at until we can have a window of all the same characters + k charcters to change
+    // Shrink the window of characters we are looking at until we can have a window of all the same characters + k characters to change
     while (right - left + 1 - maxf > k) {
       chars[s[left]] -= 1;
       left++;
@@ -25,4 +25,4 @@ function characterReplacement(s: string, k: number): number {
 }
 
 export default characterReplacement;
-exports { characterReplacement };
+exports.characterReplacement = characterReplacement;
