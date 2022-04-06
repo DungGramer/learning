@@ -11,6 +11,8 @@ function twoSum(nums: Array<number>, target: number): Array<number> {
     }
     numObj[nums[i]] = i;
   }
+
+  return [];
 }
 
 export default twoSum;
