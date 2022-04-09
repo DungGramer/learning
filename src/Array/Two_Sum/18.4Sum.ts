@@ -3,7 +3,7 @@
 function fourSum(nums: number[], target: number): number[][] {
   nums.sort((a, b) => a - b);
 
-  const result: number[][] = [];
+            const result: number[][] = [];
   const length = nums.length;
 
   for (let i = 0; i < length - 3; i++) {
