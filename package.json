@@ -16,6 +16,9 @@
     "url": "https://github.com/DungGramer/learning/issues"
   },
   "homepage": "https://github.com/DungGramer/learning#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "devDependencies": {
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
