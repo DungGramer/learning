@@ -2,9 +2,9 @@
 
 <img src="https://static.kaeducation.com/lc-js.jpg" width="400">
 
-Website: https://kaeducation.com/lc-js.html
-Source code: https://github.com/kaeducation/LeetCode_JS
-Source offline: file://192.168.1.1/share/videos/JS/LeetCode%20_%20The%20Interview%20Bootcamp/
+Website: https://kaeducation.com/lc-js.html  
+Source code: https://github.com/kaeducation/LeetCode_JS  
+Source offline: cmd://start \\\\192.168.1.1\share\Videos\JS\LeetCode_The_Interview_Bootcamp
 
 ## Prerequisites
 * [Node.js/npm](https://nodejs.org/en/)
