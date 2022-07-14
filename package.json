@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DungGramer/learning.git"
@@ -16,7 +15,9 @@
     "url": "https://github.com/DungGramer/learning/issues"
   },
   "homepage": "https://github.com/DungGramer/learning#readme",
+  "prettier": "@dunggramer/prettier",
   "devDependencies": {
+    "@dunggramer/prettier": "^1.0.0",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.4",
