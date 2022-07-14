@@ -7,6 +7,10 @@
 ### Node.js
 #### [The Complete Node.js Course | Code with Mosh](https://github.com/DungGramer/learning/tree/learn-node/code-with-mosh)
 #### [Node & ExpressJS | F8](https://github.com/DungGramer/learning/tree/learn-node/f8)
+#### [Node CLI Automation](https://github.com/DungGramer/learning/tree/node-cli-automation)
+
+### NestJS
+#### [NestJS for Pros](https://github.com/DungGramer/learning/tree/nestjs-for-pros)
 
 ### Parsers
 #### [Building a Parser from scratch](Building_a_Parser_from_scratch)
