@@ -18,6 +18,7 @@
 ### Redux
 #### [Redux + Toolkit](https://github.com/DungGramer/learning/tree/learn-redux/todo-app-redux)
 #### [Redux vanilla](https://github.com/DungGramer/learning/tree/learn-redux/redux-pure-js)
+#### [Redux Fundamentals](https://github.com/DungGramer/learning/tree/redux_fundamentals/)
 
 
 ### Vim
