@@ -35,12 +35,9 @@ store.subscribe(subscriber);
 // store.dispatch(increment());
 
 // const [dispatchIncrement, dispatchAdd] = [increment, add].map(fn => compose(store.dispatch, fn));
-const actions = bindActionCreators({increment, add}, store.dispatch);
-
+const actions = bindActionCreators({ increment, add }, store.dispatch);
 
 actions.add(1000);
 actions.increment();
-
-
 
 console.log(`📕 store - 13:createStore.js \n`, store.getState());
