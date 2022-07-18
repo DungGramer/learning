@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useActions } from './use-actions';
-import { decrement, increment, set } from "./actions";
+import { decrement, increment, set } from "../store/actions";
 
 export const useCounter = () => {
   const count = useSelector((state) => state.count);

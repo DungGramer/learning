@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { set } from './actions';
+import { set } from './store/actions';
 
 export const SetCounter = () => {
   const countFromStore = useSelector((state) => state.count);

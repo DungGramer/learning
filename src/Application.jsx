@@ -1,9 +1,10 @@
-import Counter from './Counter';
+// import Counter from './components/Counter';
+import TipCalculator from "./components/TipCalculator";
 
 const Application = () => {
   return (
     <div className="Application">
-      <Counter />
+      <TipCalculator />
     </div>
   );
 };

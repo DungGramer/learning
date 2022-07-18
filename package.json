@@ -22,10 +22,17 @@
   "homepage": "https://github.com/DungGramer/learning#readme",
   "prettier": "@dunggramer/prettier",
   "dependencies": {
+    "@twilio-paste/core": "^14.1.0",
+    "@twilio-paste/icons": "^8.1.0",
+    "@twilio-paste/stack": "^4.0.1",
+    "format-number": "^3.0.0",
+    "immer": "^9.0.15",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
     "redux": "^4.2.0",
+    "reselect": "^4.1.6",
     "sass": "^1.53.0"
   },
   "devDependencies": {

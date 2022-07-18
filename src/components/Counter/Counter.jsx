@@ -1,5 +1,5 @@
 import { SetCounter } from './SetCounter';
-import { useCounter } from './use-counter';
+import { useCounter } from './hooks/use-counter';
 
 export const Counter = () => {
   const incident = 'Incident';
