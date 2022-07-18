@@ -1,46 +1,41 @@
-import { compose } from 'redux';
-import { bindActionCreators } from 'redux';
+import { combineReducers } from 'redux';
 import { createStore } from 'redux';
 
-const initState = { value: 0 };
-
-const INCREMENT = 'counter/increment';
-const ADD = 'ADD';
-
-const incrementAction = { type: 'INCREMENT' };
-
-// Creator
-const increment = () => ({ type: INCREMENT });
-const add = (amount) => ({ type: ADD, payload: amount });
-
-const reducer = (state = initState, action) => {
-  switch (action.type) {
-    case INCREMENT:
-      return { value: state.value + 1 };
-    case ADD:
-      return { value: state.value + action.payload };
-
-    default:
-      return state;
-  }
+const initState = {
+  users: [
+    { id: 1, name: 'Steve' },
+    { id: 2, name: 'Eric' },
+  ],
+  tasks: [
+    { title: 'File the TPS reports' },
+    { title: 'Order more energy drinks' },
+  ],
 };
+
+const ADD_USER = 'ADD_USER';
+const ADD_TASK = 'ADD_TASK';
+
+const addTask = (title) => ({ type: ADD_TASK, payload: title });
+const addUser = (name) => ({ type: ADD_USER, payload: name });
+
+const userReducer = (users = initState.users, action) => {
+  if (action.type === ADD_USER) {
+    return [...users, action.payload];
+  }
+
+  return users;
+};
+
+const taskReducer = (tasks = initState.tasks, action) => {
+  if (action.type === ADD_TASK) {
+    return [...tasks, action.payload];
+  }
+
+  return tasks;
+};
+
+const reducer = combineReducers({ users: userReducer, tasks: taskReducer });
 
 const store = createStore(reducer);
 
-const subscriber = () => console.log('SUBSCRIBER', store.getState());
-
-store.subscribe(subscriber);
-
-// store.dispatch(add(1000));
-// store.dispatch(increment());
-
-// const [dispatchIncrement, dispatchAdd] = [increment, add].map(fn => compose(store.dispatch, fn));
-const actions = bindActionCreators({increment, add}, store.dispatch);
-
-
-actions.add(1000);
-actions.increment();
-
-
-
-console.log(`📕 store - 13:createStore.js \n`, store.getState());
+console.log(store.getState());
