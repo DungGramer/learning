@@ -1,3 +1,5 @@
+import { compose } from 'redux';
+import { bindActionCreators } from 'redux';
 import { createStore } from 'redux';
 
 const initState = { value: 0 };
@@ -11,13 +13,11 @@ const incrementAction = { type: 'INCREMENT' };
 const increment = () => ({ type: INCREMENT });
 const add = (amount) => ({ type: ADD, payload: amount });
 
-const reduce = (state, action) => {
+const reducer = (state = initState, action) => {
   switch (action.type) {
-    case 'INCREMENT':
-      return {
-        value: state.value + 1,
-      };
-    case 'ADD':
+    case INCREMENT:
+      return { value: state.value + 1 };
+    case ADD:
       return { value: state.value + action.payload };
 
     default:
@@ -25,6 +25,22 @@ const reduce = (state, action) => {
   }
 };
 
-const store = createStore(reduce);
+const store = createStore(reducer);
 
-console.log(`📕 store - 13:createStore.js \n`, store);
+const subscriber = () => console.log('SUBSCRIBER', store.getState());
+
+store.subscribe(subscriber);
+
+// store.dispatch(add(1000));
+// store.dispatch(increment());
+
+// const [dispatchIncrement, dispatchAdd] = [increment, add].map(fn => compose(store.dispatch, fn));
+const actions = bindActionCreators({increment, add}, store.dispatch);
+
+
+actions.add(1000);
+actions.increment();
+
+
+
+console.log(`📕 store - 13:createStore.js \n`, store.getState());
