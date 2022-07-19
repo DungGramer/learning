@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  updateTip
+  updateTip: (value) => updateTip(value)
 };
 
 export const TipSelectContainer = connect(
