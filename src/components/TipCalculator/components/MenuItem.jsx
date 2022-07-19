@@ -31,7 +31,7 @@ export const MenuItem = ({
           <Input
             id={`$item-${uuid}-price`}
             insertBefore={<div>$</div>}
-            value={price}
+            value={String(price)}
             type="number"
             onChange={(event) => updatePrice(event.target.value)}
           />
@@ -40,14 +40,14 @@ export const MenuItem = ({
           <Label htmlFor={`$item-${uuid}-quantity`}>Quantity</Label>
           <Input
             id={`$item-${uuid}-quantity`}
-            value={quantity}
+            value={String(quantity)}
             type="number"
             onChange={(event) => updateQuantity(event.target.value)}
           />
         </Box>
         <Box padding="space20" textAlign="right" width="100%">
-          <Heading variant="heading50">Total</Heading>
-          {toCurrency(total)}
+          <Heading variant="heading50" as='h5'>Total</Heading>
+          {String(toCurrency(total))}
         </Box>
       </Flex>
       <Box width="100%" textAlign="right">

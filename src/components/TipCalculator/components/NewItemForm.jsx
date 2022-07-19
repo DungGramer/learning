@@ -40,7 +40,7 @@ export const NewItemForm = ({ onSubmit }) => {
             id="item-price"
             type="number"
             insertBefore={<div>$</div>}
-            value={price}
+            value={String(price)}
             onChange={(event) => setPrice(event.target.value)}
           />
         </Box>

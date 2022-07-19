@@ -10,8 +10,8 @@ export const Calculator = () => {
     <Card>
       <NewItemFormContainer />
       <MenuItemsContainer />
-      <TipSelectContainer />
-      <Summary />
+      {/* <TipSelectContainer /> */}
+      {/* <Summary /> */}
     </Card>
   );
 };
