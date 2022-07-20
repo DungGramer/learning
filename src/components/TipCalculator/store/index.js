@@ -1,12 +1,10 @@
 import { combineReducers, createStore } from 'redux';
 import itemsReducer from './items/reducer';
 import tipPercentageReducer from './tip-percentage/reducer';
-import summaryReducer from './summary/reducer';
 
 const reducer = combineReducers({
   items: itemsReducer,
-  tipPercentage: tipPercentageReducer,
-  summary: summaryReducer,
+  tipPercentage: tipPercentageReducer
 });
 
 export const store = createStore(
