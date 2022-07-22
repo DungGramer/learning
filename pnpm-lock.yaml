@@ -2,8 +2,17 @@ lockfileVersion: 5.3
 
 specifiers:
   '@dunggramer/prettier': ^1.0.0
+  '@reduxjs/toolkit': ^1.8.3
+  '@twilio-paste/box': ^6.0.1
+  '@twilio-paste/card': ^5.0.1
+  '@twilio-paste/checkbox': ^9.0.1
   '@twilio-paste/core': ^14.1.0
+  '@twilio-paste/flex': ^4.0.1
+  '@twilio-paste/heading': ^7.0.1
   '@twilio-paste/icons': ^8.1.0
+  '@twilio-paste/input': ^5.0.1
+  '@twilio-paste/label': ^9.0.1
+  '@twilio-paste/select': ^8.0.1
   '@twilio-paste/stack': ^4.0.1
   '@types/react': ^18.0.15
   '@types/react-dom': ^18.0.6
@@ -18,24 +27,39 @@ specifiers:
   prettier: ^2.5.1
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-observable: ^1.1.3
   react-redux: ^8.0.2
   redux: ^4.2.0
+  redux-promise: ^0.6.0
   reselect: ^4.1.6
+  rxjs: ^7.5.6
   sass: ^1.53.0
   vite: ^3.0.0
 
 dependencies:
+  '@reduxjs/toolkit': 1.8.3_react-redux@8.0.2+react@18.2.0
+  '@twilio-paste/box': 6.0.1_react-dom@18.2.0+react@18.2.0
+  '@twilio-paste/card': 5.0.1_f6059a18ecf2a0376b6166b7ed87e2b0
+  '@twilio-paste/checkbox': 9.0.1_8ad3fb9cb63eb569c31f2f633fca1813
   '@twilio-paste/core': 14.1.0_4ff43bcf94f09206d1a8e944f7890891
-  '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
-  '@twilio-paste/stack': 4.0.1_react-dom@18.2.0+react@18.2.0
+  '@twilio-paste/flex': 4.0.1_f6059a18ecf2a0376b6166b7ed87e2b0
+  '@twilio-paste/heading': 7.0.1_react-dom@18.2.0+react@18.2.0
+  '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
+  '@twilio-paste/input': 5.0.1_f6059a18ecf2a0376b6166b7ed87e2b0
+  '@twilio-paste/label': 9.0.1_f6059a18ecf2a0376b6166b7ed87e2b0
+  '@twilio-paste/select': 8.0.1_9642f669b712d9e445b6350229022f8e
+  '@twilio-paste/stack': 4.0.1_f6059a18ecf2a0376b6166b7ed87e2b0
   format-number: 3.0.0
   immer: 9.0.15
   lodash: 4.17.21
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-observable: 1.1.3_react@18.2.0
   react-redux: 8.0.2_8ddf45de17920261abb19716b35d7e36
   redux: 4.2.0
+  redux-promise: 0.6.0
   reselect: 4.1.6
+  rxjs: 7.5.6
   sass: 1.53.0
 
 devDependencies:
@@ -637,6 +661,25 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /@reduxjs/toolkit/1.8.3_react-redux@8.0.2+react@18.2.0:
+    resolution: {integrity: sha512-lU/LDIfORmjBbyDLaqFN2JB9YmAT1BElET9y0ZszwhSBa5Ef3t6o5CrHupw5J1iOXwd+o92QfQZ8OJpwXvsssg==}
+    peerDependencies:
+      react: ^16.9.0 || ^17.0.0 || ^18
+      react-redux: ^7.2.1 || ^8.0.2
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-redux:
+        optional: true
+    dependencies:
+      immer: 9.0.15
+      react: 18.2.0
+      react-redux: 8.0.2_8ddf45de17920261abb19716b35d7e36
+      redux: 4.2.0
+      redux-thunk: 2.4.1_redux@4.2.0
+      reselect: 4.1.6
+    dev: false
+
   /@styled-system/background/5.1.2:
     resolution: {integrity: sha512-jtwH2C/U6ssuGSvwTN3ri/IyjdHb8W9X/g8Y0JLcrH02G+BW3OS8kZdHphF1/YyRklnrKrBT2ngwGUK6aqqV3A==}
     dependencies:
@@ -782,7 +825,7 @@ packages:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/button': 10.1.0_cc35f5f6ab965f06efa218c536e6b734
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/media-object': 6.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/spinner': 10.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
@@ -811,7 +854,7 @@ packages:
     dependencies:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/theme': 7.0.2_a6dcdc8e8eb42dfbd038bbeaa5d88b9b
@@ -873,7 +916,7 @@ packages:
     dependencies:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/text': 6.0.1_109682225592867505eea8c58402bee9
@@ -908,7 +951,7 @@ packages:
       '@twilio-paste/animation-library': 0.3.7_react-dom@18.2.0+react@18.2.0
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/spinner': 10.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
       '@twilio-paste/stack': 4.0.1_4e5791dbbbd74b928d708dddeaf3c121
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
@@ -945,7 +988,7 @@ packages:
       '@twilio-paste/design-tokens': 7.3.0
       '@twilio-paste/flex': 4.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/help-text': 9.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/label': 9.0.1_d614f19dc90c4732cc0b339cfdd48146
       '@twilio-paste/screen-reader-only': 9.0.1_d74cbff97a742a6ee086a7f01dfbea8d
       '@twilio-paste/sibling-box': 5.0.1_4e5791dbbbd74b928d708dddeaf3c121
@@ -980,6 +1023,25 @@ packages:
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/theme': 7.0.2_a6dcdc8e8eb42dfbd038bbeaa5d88b9b
       '@twilio-paste/types': 3.1.8_react@18.2.0
+      deepmerge: 4.2.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@twilio-paste/box/6.0.1_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-x9p8mZgMWP/I53V5zlhCBBN2j6QebZTV7Eh0zi+pGzA0NpUQ9nkts9Y07eqN40os44VDaMAOWwNOJ1HSLYdXSQ==}
+    peerDependencies:
+      '@twilio-paste/animation-library': ^0.3.2
+      '@twilio-paste/customization': ^4.0.0
+      '@twilio-paste/design-tokens': ^7.0.0
+      '@twilio-paste/style-props': ^5.0.0
+      '@twilio-paste/styling-library': ^1.0.0
+      '@twilio-paste/theme': ^7.0.0
+      '@twilio-paste/types': ^3.1.1
+      prop-types: ^15.7.2
+      react: ^16.8.6 || ^17.0.2
+      react-dom: ^16.8.6 || ^17.0.2
+    dependencies:
       deepmerge: 4.2.2
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -1037,7 +1099,7 @@ packages:
       '@twilio-paste/animation-library': 0.3.7_react-dom@18.2.0+react@18.2.0
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/spinner': 10.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
       '@twilio-paste/stack': 4.0.1_4e5791dbbbd74b928d708dddeaf3c121
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
@@ -1073,6 +1135,24 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /@twilio-paste/card/5.0.1_f6059a18ecf2a0376b6166b7ed87e2b0:
+    resolution: {integrity: sha512-qs7AoB/NTDeO3FE+ShmyJ5PXyaiRIp/iZwyQuo6FIhnMU2IqBUm+WouNnSUtJ6M6tooo9ugrKz4tRb1UHkT56A==}
+    peerDependencies:
+      '@twilio-paste/box': ^6.0.0
+      '@twilio-paste/design-tokens': ^7.0.0
+      '@twilio-paste/style-props': ^5.0.0
+      '@twilio-paste/styling-library': ^1.0.0
+      '@twilio-paste/theme': ^7.0.0
+      '@twilio-paste/types': ^3.1.1
+      prop-types: ^15.7.2
+      react: ^16.8.6 || ^17.0.2
+      react-dom: ^16.8.6 || ^17.0.2
+    dependencies:
+      '@twilio-paste/box': 6.0.1_react-dom@18.2.0+react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@twilio-paste/chat-log/1.1.0_a49209a4c129c090c757a5df0c1635a5:
     resolution: {integrity: sha512-q7WLQCq937K0BOykFvK5/VDOR8IO6VUBULvKqzHbZWEX/Wacw67XAZD5GwseJ6eVvwNZD1+3wN2EWNffDhg/mQ==}
     peerDependencies:
@@ -1097,7 +1177,7 @@ packages:
       '@twilio-paste/button': 10.1.0_cc35f5f6ab965f06efa218c536e6b734
       '@twilio-paste/customization': 4.0.2_4214ab18bbbe89cc7892f4df4cac6f38
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/media-object': 6.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/screen-reader-only': 9.0.1_d74cbff97a742a6ee086a7f01dfbea8d
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
@@ -1135,7 +1215,7 @@ packages:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
       '@twilio-paste/help-text': 9.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/inline-control-group': 9.0.1_05abc131ee07db0c8d075de30ef5c304
       '@twilio-paste/label': 9.0.1_d614f19dc90c4732cc0b339cfdd48146
       '@twilio-paste/media-object': 6.0.1_cedc4386b53f67d9434194a203a79c71
@@ -1147,6 +1227,36 @@ packages:
       '@twilio-paste/theme': 7.0.2_a6dcdc8e8eb42dfbd038bbeaa5d88b9b
       '@twilio-paste/types': 3.1.8_react@18.2.0
       '@twilio-paste/uid-library': 0.2.5_08741bd84ef3e6fa073678331eea05f2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@twilio-paste/checkbox/9.0.1_8ad3fb9cb63eb569c31f2f633fca1813:
+    resolution: {integrity: sha512-hOWb8DTAwWGuAQ1WFepNuv44yzsV95BwPuCu0tZ/2G2O+6/HMjg2/7NAfkzk89Sc+HXUdNPdvzFhq3ojAOFmlg==}
+    peerDependencies:
+      '@twilio-paste/base-radio-checkbox': ^9.0.0
+      '@twilio-paste/box': ^6.0.0
+      '@twilio-paste/design-tokens': ^7.0.0
+      '@twilio-paste/help-text': ^9.0.0
+      '@twilio-paste/icons': ^8.0.0
+      '@twilio-paste/inline-control-group': ^9.0.0
+      '@twilio-paste/label': ^9.0.0
+      '@twilio-paste/media-object': ^6.0.0
+      '@twilio-paste/screen-reader-only': ^9.0.0
+      '@twilio-paste/sibling-box': ^5.0.0
+      '@twilio-paste/style-props': ^5.0.0
+      '@twilio-paste/styling-library': ^1.0.0
+      '@twilio-paste/text': ^6.0.0
+      '@twilio-paste/theme': ^7.0.0
+      '@twilio-paste/types': ^3.1.1
+      '@twilio-paste/uid-library': ^0.2.1
+      prop-types: ^15.7.2
+      react: ^16.8.6 || ^17.0.2
+      react-dom: ^16.8.6 || ^17.0.2
+    dependencies:
+      '@twilio-paste/box': 6.0.1_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
+      '@twilio-paste/label': 9.0.1_f6059a18ecf2a0376b6166b7ed87e2b0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -1217,7 +1327,7 @@ packages:
       '@twilio-paste/design-tokens': 7.3.0
       '@twilio-paste/flex': 4.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/help-text': 9.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/input': 5.0.1_72564dd0cb2da12c84b3d0951305b8f9
       '@twilio-paste/input-box': 6.0.1_4e5791dbbbd74b928d708dddeaf3c121
       '@twilio-paste/label': 9.0.1_d614f19dc90c4732cc0b339cfdd48146
@@ -1276,7 +1386,7 @@ packages:
       '@twilio-paste/grid': 4.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/heading': 7.0.1_b3b15b8ba476a74f971e250d86010bc5
       '@twilio-paste/help-text': 9.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/inline-control-group': 9.0.1_05abc131ee07db0c8d075de30ef5c304
       '@twilio-paste/input': 5.0.1_72564dd0cb2da12c84b3d0951305b8f9
       '@twilio-paste/input-box': 6.0.1_4e5791dbbbd74b928d708dddeaf3c121
@@ -1378,7 +1488,7 @@ packages:
       '@twilio-paste/button': 10.1.0_cc35f5f6ab965f06efa218c536e6b734
       '@twilio-paste/customization': 4.0.2_4214ab18bbbe89cc7892f4df4cac6f38
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/reakit-library': 0.8.6_react-dom@18.2.0+react@18.2.0
       '@twilio-paste/spinner': 10.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
       '@twilio-paste/stack': 4.0.1_4e5791dbbbd74b928d708dddeaf3c121
@@ -1491,7 +1601,7 @@ packages:
       '@twilio-paste/design-tokens': 7.3.0
       '@twilio-paste/disclosure-primitive': 0.3.9_656b61b1318bfcbb04bf78bcc3f0c261
       '@twilio-paste/heading': 7.0.1_b3b15b8ba476a74f971e250d86010bc5
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/text': 6.0.1_109682225592867505eea8c58402bee9
@@ -1525,7 +1635,7 @@ packages:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/customization': 4.0.2_4214ab18bbbe89cc7892f4df4cac6f38
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/theme': 7.0.2_a6dcdc8e8eb42dfbd038bbeaa5d88b9b
@@ -1569,6 +1679,24 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /@twilio-paste/flex/4.0.1_f6059a18ecf2a0376b6166b7ed87e2b0:
+    resolution: {integrity: sha512-MFEaGQbeKXuxCLHJzgbBTmUHvG/nPYqEqPt4xrtxnbzwgVQaNrCfYyddk6LofarlAtmcnJPB59LeTANLb2/OmQ==}
+    peerDependencies:
+      '@twilio-paste/box': ^6.0.0
+      '@twilio-paste/design-tokens': ^7.0.0
+      '@twilio-paste/style-props': ^5.0.0
+      '@twilio-paste/styling-library': ^1.0.0
+      '@twilio-paste/theme': ^7.0.0
+      '@twilio-paste/types': ^3.1.1
+      prop-types: ^15.7.2
+      react: ^16.8.6 || ^17.0.2
+      react-dom: ^16.8.6 || ^17.0.2
+    dependencies:
+      '@twilio-paste/box': 6.0.1_react-dom@18.2.0+react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@twilio-paste/form-pill-group/4.0.2_93014023dd9e6fc05e82508a86b1692e:
     resolution: {integrity: sha512-2gvMAmjw0i1u6+I+h4OYUZNdPIs0lEBmini7OhITfZM9ln594HC6rgZ8fO8iDc0X5IdKn+Ay8knKg/GdIwAswA==}
     peerDependencies:
@@ -1592,7 +1720,7 @@ packages:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/customization': 4.0.2_4214ab18bbbe89cc7892f4df4cac6f38
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/reakit-library': 0.8.6_react-dom@18.2.0+react@18.2.0
       '@twilio-paste/screen-reader-only': 9.0.1_d74cbff97a742a6ee086a7f01dfbea8d
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
@@ -1650,6 +1778,23 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /@twilio-paste/heading/7.0.1_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-nZtmJ2vmjFGhxqBVi2G5ezKzUMeNSxe/vTHvNjJ3YYRDqD2LaaeXW3R+Z/rdfGAhplONUR1itRoFWBjq7LdOcA==}
+    peerDependencies:
+      '@twilio-paste/design-tokens': ^7.0.0
+      '@twilio-paste/style-props': ^5.0.0
+      '@twilio-paste/styling-library': ^1.0.0
+      '@twilio-paste/text': ^6.0.0
+      '@twilio-paste/theme': ^7.0.0
+      '@twilio-paste/types': ^3.1.1
+      prop-types: ^15.7.2
+      react: ^16.8.6 || ^17.0.2
+      react-dom: ^16.8.6 || ^17.0.2
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@twilio-paste/help-text/9.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021:
     resolution: {integrity: sha512-Ka2o2bPlQ6V6YTlpuaxIDd8GoJl0/LX9fOM78Mkx7Y5myngVaavzIgTWEIcwSoXtifoLqSVQ7vlwYQ6uDkSmSA==}
     peerDependencies:
@@ -1667,7 +1812,7 @@ packages:
     dependencies:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/theme': 7.0.2_a6dcdc8e8eb42dfbd038bbeaa5d88b9b
@@ -1677,7 +1822,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@twilio-paste/icons/8.1.0_react-dom@18.2.0+react@18.2.0:
+  /@twilio-paste/icons/8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0:
     resolution: {integrity: sha512-THrPepUs/ZK+4VeHfiYUcWoxTyJFt4+G3Zrs31nb2QbZntiz1B74sU5qmY5pdLMBC0IQU8LpX2muFFyxfll4Kg==}
     peerDependencies:
       '@twilio-paste/box': ^6.0.0
@@ -1691,6 +1836,7 @@ packages:
       react: ^16.8.6 || ^17.0.2
       react-dom: ^16.8.6 || ^17.0.2
     dependencies:
+      '@twilio-paste/box': 6.0.1_react-dom@18.2.0+react@18.2.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -1719,7 +1865,7 @@ packages:
       '@twilio-paste/design-tokens': 7.3.0
       '@twilio-paste/flex': 4.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/help-text': 9.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/label': 9.0.1_d614f19dc90c4732cc0b339cfdd48146
       '@twilio-paste/screen-reader-only': 9.0.1_d74cbff97a742a6ee086a7f01dfbea8d
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
@@ -1784,6 +1930,26 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /@twilio-paste/input/5.0.1_f6059a18ecf2a0376b6166b7ed87e2b0:
+    resolution: {integrity: sha512-qhfO7HL6SDP7e7UbMZSjLwQm5t4SLn+uMsv/GwP76J72GpuRgY91BLZh+k4QaYOZQM0hEaMFHMjHJ6EM4iUv8Q==}
+    peerDependencies:
+      '@twilio-paste/box': ^6.0.0
+      '@twilio-paste/design-tokens': ^7.0.0
+      '@twilio-paste/input-box': ^6.0.0
+      '@twilio-paste/style-props': ^5.0.0
+      '@twilio-paste/styling-library': ^1.0.0
+      '@twilio-paste/theme': ^7.0.0
+      '@twilio-paste/types': ^3.1.1
+      '@twilio-paste/uid-library': ^0.2.1
+      prop-types: ^15.7.2
+      react: ^16.8.6 || ^17.0.2
+      react-dom: ^16.8.6 || ^17.0.2
+    dependencies:
+      '@twilio-paste/box': 6.0.1_react-dom@18.2.0+react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@twilio-paste/label/9.0.1_d614f19dc90c4732cc0b339cfdd48146:
     resolution: {integrity: sha512-YdFWaaRmHrZMB7MmwGR2Npiv7Tjeb9RgqxnBW9ZcDPcrcFL+Q2rSyHqVqKQX4wM2FShHt5Xz7XQ5apZzQS2svw==}
     peerDependencies:
@@ -1809,6 +1975,27 @@ packages:
       '@twilio-paste/theme': 7.0.2_a6dcdc8e8eb42dfbd038bbeaa5d88b9b
       '@twilio-paste/types': 3.1.8_react@18.2.0
       '@twilio-paste/uid-library': 0.2.5_08741bd84ef3e6fa073678331eea05f2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@twilio-paste/label/9.0.1_f6059a18ecf2a0376b6166b7ed87e2b0:
+    resolution: {integrity: sha512-YdFWaaRmHrZMB7MmwGR2Npiv7Tjeb9RgqxnBW9ZcDPcrcFL+Q2rSyHqVqKQX4wM2FShHt5Xz7XQ5apZzQS2svw==}
+    peerDependencies:
+      '@twilio-paste/box': ^6.0.0
+      '@twilio-paste/design-tokens': ^7.0.0
+      '@twilio-paste/media-object': ^6.0.0
+      '@twilio-paste/screen-reader-only': ^9.0.0
+      '@twilio-paste/style-props': ^5.0.0
+      '@twilio-paste/styling-library': ^1.0.0
+      '@twilio-paste/theme': ^7.0.0
+      '@twilio-paste/types': ^3.1.1
+      '@twilio-paste/uid-library': ^0.2.1
+      prop-types: ^15.7.2
+      react: ^16.8.6 || ^17.0.2
+      react-dom: ^16.8.6 || ^17.0.2
+    dependencies:
+      '@twilio-paste/box': 6.0.1_react-dom@18.2.0+react@18.2.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -1898,7 +2085,7 @@ packages:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/button': 10.1.0_cc35f5f6ab965f06efa218c536e6b734
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/media-object': 6.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/menu-primitive': 0.2.10_656b61b1318bfcbb04bf78bcc3f0c261
       '@twilio-paste/reakit-library': 0.8.6_react-dom@18.2.0+react@18.2.0
@@ -1955,7 +2142,7 @@ packages:
       '@twilio-paste/design-tokens': 7.3.0
       '@twilio-paste/flex': 4.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/heading': 7.0.1_b3b15b8ba476a74f971e250d86010bc5
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/modal-dialog-primitive': 0.3.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/spinner': 10.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
@@ -1998,7 +2185,7 @@ packages:
     dependencies:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/text': 6.0.1_109682225592867505eea8c58402bee9
@@ -2057,7 +2244,7 @@ packages:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/button': 10.1.0_cc35f5f6ab965f06efa218c536e6b734
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/non-modal-dialog-primitive': 0.3.10_656b61b1318bfcbb04bf78bcc3f0c261
       '@twilio-paste/reakit-library': 0.8.6_react-dom@18.2.0+react@18.2.0
       '@twilio-paste/spinner': 10.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
@@ -2099,7 +2286,7 @@ packages:
       '@twilio-paste/design-tokens': 7.3.0
       '@twilio-paste/flex': 4.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/help-text': 9.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/inline-control-group': 9.0.1_05abc131ee07db0c8d075de30ef5c304
       '@twilio-paste/label': 9.0.1_d614f19dc90c4732cc0b339cfdd48146
       '@twilio-paste/screen-reader-only': 9.0.1_d74cbff97a742a6ee086a7f01dfbea8d
@@ -2157,11 +2344,33 @@ packages:
     dependencies:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/theme': 7.0.2_a6dcdc8e8eb42dfbd038bbeaa5d88b9b
       '@twilio-paste/types': 3.1.8_react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@twilio-paste/select/8.0.1_9642f669b712d9e445b6350229022f8e:
+    resolution: {integrity: sha512-QjMBo+LNBE9cNddLdcs3981M6sjpuRZTeYKXqiWAlS6zCqxQfPfDNgU8djpS7ztX2R3bxDIqz5nQa4nvsDk2sw==}
+    peerDependencies:
+      '@twilio-paste/box': ^6.0.0
+      '@twilio-paste/design-tokens': ^7.0.0
+      '@twilio-paste/icons': ^8.0.0
+      '@twilio-paste/input-box': ^6.0.0
+      '@twilio-paste/style-props': ^5.0.0
+      '@twilio-paste/styling-library': ^1.0.0
+      '@twilio-paste/theme': ^7.0.0
+      '@twilio-paste/types': ^3.1.1
+      '@twilio-paste/uid-library': ^0.2.1
+      prop-types: ^15.7.2
+      react: ^16.8.6 || ^17.0.2
+      react-dom: ^16.8.6 || ^17.0.2
+    dependencies:
+      '@twilio-paste/box': 6.0.1_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -2184,7 +2393,7 @@ packages:
     dependencies:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/input-box': 6.0.1_4e5791dbbbd74b928d708dddeaf3c121
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
@@ -2285,7 +2494,7 @@ packages:
     dependencies:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/theme': 7.0.2_a6dcdc8e8eb42dfbd038bbeaa5d88b9b
@@ -2320,7 +2529,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@twilio-paste/stack/4.0.1_react-dom@18.2.0+react@18.2.0:
+  /@twilio-paste/stack/4.0.1_f6059a18ecf2a0376b6166b7ed87e2b0:
     resolution: {integrity: sha512-YfUZL0cbJafG9ygxiic0+Jv3zNdHuYcXeIqOu9MU0aqfFirODerm05UumRcDz5PVa6un9V0k1xGVRrE+HXhiVA==}
     peerDependencies:
       '@twilio-paste/box': ^6.0.0
@@ -2334,6 +2543,7 @@ packages:
       react: ^16.8.6 || ^17.0.2
       react-dom: ^16.8.6 || ^17.0.2
     dependencies:
+      '@twilio-paste/box': 6.0.1_react-dom@18.2.0+react@18.2.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -2570,7 +2780,7 @@ packages:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/button': 10.1.0_cc35f5f6ab965f06efa218c536e6b734
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/media-object': 6.0.1_cedc4386b53f67d9434194a203a79c71
       '@twilio-paste/reakit-library': 0.8.6_react-dom@18.2.0+react@18.2.0
       '@twilio-paste/spinner': 10.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
@@ -2617,7 +2827,7 @@ packages:
     dependencies:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/reakit-library': 0.8.6_react-dom@18.2.0+react@18.2.0
       '@twilio-paste/spinner': 10.0.1_b7c2abbddc8e33b9f95ab97bd1d0f021
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
@@ -2647,7 +2857,7 @@ packages:
     dependencies:
       '@twilio-paste/box': 6.0.1_109682225592867505eea8c58402bee9
       '@twilio-paste/design-tokens': 7.3.0
-      '@twilio-paste/icons': 8.1.0_react-dom@18.2.0+react@18.2.0
+      '@twilio-paste/icons': 8.1.0_f6059a18ecf2a0376b6166b7ed87e2b0
       '@twilio-paste/style-props': 5.0.2_c17f9869eb1de64d4bc2345604f9a8b6
       '@twilio-paste/styling-library': 1.0.2_08741bd84ef3e6fa073678331eea05f2
       '@twilio-paste/theme': 7.0.2_a6dcdc8e8eb42dfbd038bbeaa5d88b9b
@@ -3641,6 +3851,13 @@ packages:
     resolution: {integrity: sha512-0sQoMh9s0BYsm+12Huy/rkKxVu4R1+r96YX5cG44rHV0pQ6iC3Q+mkoMFaGWObMFYQxCVT+ssG1ksneA2MI9KQ==}
     dev: true
 
+  /flux-standard-action/2.1.2:
+    resolution: {integrity: sha512-7vdgawlphCjzaMLdpZv8hlGC/FJCXu6sqE3Wuqe3HLZ22KcDiO4IFplxLDePDhEt6hgCrugt45RoUObuzZP6Kg==}
+    dependencies:
+      lodash.isplainobject: 4.0.6
+      lodash.isstring: 4.0.1
+    dev: false
+
   /focus-lock/0.11.2:
     resolution: {integrity: sha512-pZ2bO++NWLHhiKkgP1bEXHhR1/OjVcSvlCJ98aNJDFeb7H5OOQaO+SKOZle6041O9rv2tmbrO4JzClAvDUHf0g==}
     engines: {node: '>=10'}
@@ -3914,6 +4131,10 @@ packages:
     engines: {node: '>=0.12.0'}
     dev: false
 
+  /is-promise/2.2.2:
+    resolution: {integrity: sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==}
+    dev: false
+
   /is-regex/1.1.4:
     resolution: {integrity: sha512-kvRdxDsxZjhzUX07ZnLydzS1TU/TJlTUHHY4YLL87e37oUA49DfkLqgy+VjFocowy29cKvcSiu+kIv728jTTVg==}
     engines: {node: '>= 0.4'}
@@ -4012,6 +4233,14 @@ packages:
       p-locate: 2.0.0
       path-exists: 3.0.0
     dev: true
+
+  /lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
+    dev: false
+
+  /lodash.isstring/4.0.1:
+    resolution: {integrity: sha512-0wJxfxH1wgO3GrbuP+dTTk7op+6L41QCXbGINEmD+ny/G/eCqGzxyCsh7159S+mgDDcoarnBw6PC1PS5+wUGgw==}
+    dev: false
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -4288,6 +4517,17 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
 
+  /react-observable/1.1.3_react@18.2.0:
+    resolution: {integrity: sha512-Cs9k90O8d+8i6rZ8+neuFWj5xKGoVyUzJJEw+gYdkFyBJXxbuNdR+QDIrW3oJ8YYoEaA+nss+kcfnU6gLmjp5Q==}
+    os: []
+    peerDependencies:
+      react: 0.13.3
+      rx: 2.5.3
+    dependencies:
+      react: 18.2.0
+    dev: false
+    bundledDependencies: []
+
   /react-redux/8.0.2_8ddf45de17920261abb19716b35d7e36:
     resolution: {integrity: sha512-nBwiscMw3NoP59NFCXFf02f8xdo+vSHT/uZ1ldDwF7XaTpzm+Phk97VT4urYBl5TYAPNVaFm12UHAEyzkpNzRA==}
     peerDependencies:
@@ -4464,6 +4704,21 @@ packages:
       reakit-warning: 0.6.2_react-dom@18.2.0+react@18.2.0
     dev: false
 
+  /redux-promise/0.6.0:
+    resolution: {integrity: sha512-R2mGxJbPFgXyCNbFDE6LjTZhCEuACF54g1bxld3nqBhnRMX0OsUyWk77moF7UMGkUdl5WOAwc4BC5jOd1dunqQ==}
+    dependencies:
+      flux-standard-action: 2.1.2
+      is-promise: 2.2.2
+    dev: false
+
+  /redux-thunk/2.4.1_redux@4.2.0:
+    resolution: {integrity: sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q==}
+    peerDependencies:
+      redux: ^4
+    dependencies:
+      redux: 4.2.0
+    dev: false
+
   /redux/4.2.0:
     resolution: {integrity: sha512-oSBmcKKIuIR4ME29/AeNUnl5L+hvBq7OaJWzaptTQJAntaPvxIJqfnjbaEiCzzaIz+XmVILfqAM3Ob0aXLPfjA==}
     dependencies:
@@ -4518,6 +4773,12 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /rxjs/7.5.6:
+    resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
+    dependencies:
+      tslib: 2.4.0
+    dev: false
 
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
