@@ -19,7 +19,7 @@ export const Task = ({ taskId }) => {
         <Checkbox
           id={`task-${taskId}`}
           checked={task.complete}
-          onChange={(event) =>
+          onClick={(event) =>
             dispatch(toggleTask(taskId, event.target.checked))
           }
           children={<Label htmlFor={`task-${taskId}`}>{task.title}</Label>}
