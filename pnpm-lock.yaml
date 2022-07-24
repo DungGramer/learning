@@ -24,6 +24,7 @@ specifiers:
   format-number: ^3.0.0
   immer: ^9.0.15
   lodash: ^4.17.21
+  lodash.shuffle: ^4.2.0
   prettier: ^2.5.1
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -52,6 +53,7 @@ dependencies:
   format-number: 3.0.0
   immer: 9.0.15
   lodash: 4.17.21
+  lodash.shuffle: 4.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-observable: 1.1.3_react@18.2.0
@@ -4245,6 +4247,10 @@ packages:
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
+
+  /lodash.shuffle/4.2.0:
+    resolution: {integrity: sha512-V/rTAABKLFjoecTZjKSv+A1ZomG8hZg8hlgeG6wwQVD9AGv+10zqqSf6mFq2tVA703Zd5R0YhSuSlXA+E/Ei+Q==}
+    dev: false
 
   /lodash.uniq/4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
