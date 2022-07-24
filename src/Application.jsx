@@ -1,7 +1,7 @@
 // import Counter from './components/Counter';
 // import TipCalculator from "./components/TipCalculator";
 // import Chores from './components/chores-redux';
-import StarWars from './components/star-wars';
+import StarWars from './components/search-async';
 
 const Application = () => {
   return (

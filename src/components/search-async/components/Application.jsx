@@ -4,7 +4,7 @@ import FetchCharacters from './FetchCharacters';
 export const Application = () => {
   return (
     <div className="Application">
-      <h1>Star Wars Characters</h1>
+      <h1>Algolia Search</h1>
       <FetchCharacters />
       <Characters />
     </div>

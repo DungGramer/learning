@@ -9,8 +9,8 @@ export const Characters = () => {
   return (
     <section className="Characters">
       {loading && <Loading />}
-      {characters.map((character) => (
-        <Character key={character.id} character={character} />
+      {characters?.map((character) => (
+        <Character key={character.objectID} title={character.title} url={character.url} />
       ))}
     </section>
   );
