@@ -1,32 +1,60 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer } from "react";
+
+const initialState = {
+  error: null,
+  loading: false,
+  result: [],
+};
+
+const fetchReducer = (state, action) => {
+  if (action.type === "LOADING") {
+    return {
+      result: [],
+      loading: true,
+      error: null,
+    };
+  }
+
+  if (action.type === "RESPONSE_COMPLETE") {
+    return {
+      result: action.payload.response,
+      loading: false,
+      error: null,
+    };
+  }
+
+  if (action.type === "ERROR") {
+    return {
+      result: [],
+      loading: false,
+      error: action.payload.error,
+    };
+  }
+
+  return state;
+};
 
 function useFetch(url) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [response, setResponse] = useState();
+  const [state, dispatch] = useReducer(fetchReducer, initialState);
 
   useEffect(() => {
-    setLoading(true);
-    setResponse(null);
-    setError(null);
+    dispatch({ type: "LOADING" });
 
     const fetchUrl = async () => {
       try {
         const res = await fetch(url);
         const data = await res.json();
 
-        setResponse(data);
+        dispatch({ type: "RESPONSE_COMPLETE", payload: { response: data } });
       } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
+        dispatch({ type: "ERROR", payload: { error } });
       }
     };
 
     fetchUrl();
   }, []);
 
-  return [response, loading, error];
+  return [state.result, state.loading, state.error];
 }
 
 export default useFetch;

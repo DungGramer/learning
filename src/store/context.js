@@ -1,13 +1,13 @@
 export const initialState = {
   error: null,
   loading: false,
-  characters: [],
+  result: [],
 };
 
-export const reducer = (state, action) => {
+export const fetchReducer = (state, action) => {
   if (action.type === "LOADING") {
     return {
-      characters: [],
+      result: [],
       loading: true,
       error: null,
     };
@@ -15,7 +15,7 @@ export const reducer = (state, action) => {
 
   if (action.type === "RESPONSE_COMPLETE") {
     return {
-      characters: action.payload.hits,
+      result: action.payload.response,
       loading: false,
       error: null,
     };
@@ -23,7 +23,7 @@ export const reducer = (state, action) => {
 
   if (action.type === "ERROR") {
     return {
-      characters: [],
+      result: [],
       loading: false,
       error: action.payload.error,
     };
