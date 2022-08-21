@@ -4,10 +4,10 @@ const CharacterView = ({ character = {} }) => {
   console.log(character);
   return (
     <section className="CharacterView">
-      <h2>{character.name}</h2>
+      <h2>{character.title}</h2>
       <ul className="CharacterDetails">
         <li>
-          <strong>Birth Year</strong>: {character.birthYear}
+          <strong>Created at</strong>: {character.created_at}
         </li>
         <li>
           <strong>Eye Color</strong>: {character.eyeColor}

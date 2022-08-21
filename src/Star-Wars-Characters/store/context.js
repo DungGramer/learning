@@ -4,7 +4,7 @@ export const initialState = {
   result: [],
 };
 
-export const fetchReducer = (state, action) => {
+export const reducer = (state, action) => {
   if (action.type === "LOADING") {
     return {
       result: [],
