@@ -13,9 +13,13 @@
 #### [NestJS for Pros](https://github.com/DungGramer/learning/tree/nestjs-for-pros)
 
 ### Parsers
-#### [Building a Parser from scratch](Building_a_Parser_from_scratch)
+#### [Building a Parser from scratch](https://github.com/DungGramer/learning/tree/Building_a_Parser_from_scratch)
+
+### React.JS
+#### [State Management in Pure React, v2](https://github.com/DungGramer/learning/tree/State_Management_in_Pure_React)  
 
 ### Redux
+#### [Redux Fundamentals (feat. React)](https://github.com/DungGramer/learning/tree/redux_fundamentals)
 #### [Redux + Toolkit](https://github.com/DungGramer/learning/tree/learn-redux/todo-app-redux)
 #### [Redux vanilla](https://github.com/DungGramer/learning/tree/learn-redux/redux-pure-js)
 
