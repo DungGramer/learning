@@ -1,0 +1,11 @@
+<h2>{{ authors.length }} Authors</h2>
+<ul>
+  <li *ngFor="let author of authors">
+    {{ author }}
+  </li>
+</ul>
+<button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="'teal'" (click)="onSave($event)">Save</button>
+
+<input type="text" [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+
+<p>{{ lorem | summary:10 }}</p>
