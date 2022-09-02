@@ -13,14 +13,22 @@ import { FormsModule } from '@angular/forms';
 import { StarComponent } from './star/star.component';
 import { TitleComponent } from './title/title.component';
 import { LikeComponent } from './like/like.component';
+import { InputFormatDirective } from './input-format.directive';
 
 @NgModule({
-  declarations: [AppComponent, CourseComponent, AuthorsComponent, SummaryPipe, StarComponent, TitleComponent, TitleCasePipe, LikeComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [
-    CourseService,
-    AuthorsService
+  declarations: [
+    AppComponent,
+    CourseComponent,
+    AuthorsComponent,
+    SummaryPipe,
+    StarComponent,
+    TitleComponent,
+    TitleCasePipe,
+    LikeComponent,
+    InputFormatDirective,
   ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [CourseService, AuthorsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
