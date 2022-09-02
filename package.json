@@ -21,7 +21,6 @@
     "url": "https://github.com/DungGramer/learning/issues"
   },
   "homepage": "https://github.com/DungGramer/learning#readme",
-  "prettier": "@dunggramer/prettier",
   "dependencies": {
     "@angular/animations": "^14.0.0",
     "@angular/common": "^14.0.0",
