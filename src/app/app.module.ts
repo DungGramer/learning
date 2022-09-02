@@ -12,9 +12,10 @@ import { AuthorsComponent } from './authors/authors.component';
 import { FormsModule } from '@angular/forms';
 import { StarComponent } from './star/star.component';
 import { TitleComponent } from './title/title.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
-  declarations: [AppComponent, CourseComponent, AuthorsComponent, SummaryPipe, StarComponent, TitleComponent, TitleCasePipe],
+  declarations: [AppComponent, CourseComponent, AuthorsComponent, SummaryPipe, StarComponent, TitleComponent, TitleCasePipe, LikeComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     CourseService,
