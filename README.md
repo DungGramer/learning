@@ -12,6 +12,9 @@
 ### NestJS
 #### [NestJS for Pros](https://github.com/DungGramer/learning/tree/nestjs-for-pros)
 
+### Monorepo
+#### [Scale React Development with Nx](https://github.com/DungGramer/learning/tree/monorepo/scale-react-development-with-nx)
+
 ### Parsers
 #### [Building a Parser from scratch](https://github.com/DungGramer/learning/tree/Building_a_Parser_from_scratch)
 

@@ -1,0 +1,6 @@
+{
+  "settings": {
+    "task.allowAutomaticTasks": "on",
+    "prettier.ignorePath": ".gitignore"
+  }
+}
