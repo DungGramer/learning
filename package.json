@@ -22,6 +22,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "nx": "15.2.4",
+    "@nrwl/nx-cloud": "latest"
   }
 }
