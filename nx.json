@@ -8,6 +8,10 @@
       }
     }
   },
-  "targetDefaults": {},
+  "targetDefaults": {
+    "build": {
+      "outputs": ["{projectRoot}/dist"]
+    }
+  },
   "defaultBase": "master"
 }

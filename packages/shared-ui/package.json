@@ -14,5 +14,14 @@
   },
   "devDependencies": {
     "typescript": "^4.8.4"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": [
+          "./dist"
+        ]
+      }
+    }
   }
 }
