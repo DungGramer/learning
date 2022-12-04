@@ -1,3 +1,3 @@
-export default function Button(props: any) {
-  return <button onClick={() => props.onClick()}>Button</button>;
-}
+export const Button = (props: any) => {
+  return <button onClick={() => props.onClick()}>{props.children}</button>;
+};
