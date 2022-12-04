@@ -8,10 +8,16 @@
       }
     }
   },
+  "namedInputs": {
+    "noMarkdown": ["!{projectRoot}/**/*.md"]
+  },
   "targetDefaults": {
     "build": {
-      "inputs": ["!{projectRoot}/**/*.md"],
+      "inputs": ["noMarkdown"],
       "outputs": ["{projectRoot}/dist"]
+    },
+    "test": {
+      "inputs": ["noMarkdown"]
     }
   },
   "defaultBase": "master"
