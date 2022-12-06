@@ -1,32 +1,30 @@
-# My Learning
+<h1 align="center">
+  <a href="https://ui.dev">
+    <img
+      src="https://ui.dev/images/ambitious-banner-dark.jpg"
+      alt="ui.dev banner" width="600" />
+  </a>
+  <br />
+</h1>
 
-### Alogrithms
-#### [AlgoDSE](https://github.com/DungGramer/learning/tree/AlgoDSE)
-#### [JavaScript & LeetCode: The Interview Bootcamp](https://github.com/DungGramer/learning/tree/LeetCode_JS)
+<h3 align="center">React Query Course PRoject - <a href="https://react-query-issue-tracker.ui.dev">Issue Tracker</a></h3>
 
-### Node.js
-#### [The Complete Node.js Course | Code with Mosh](https://github.com/DungGramer/learning/tree/learn-node/code-with-mosh)
-#### [Node & ExpressJS | F8](https://github.com/DungGramer/learning/tree/learn-node/f8)
-#### [Node CLI Automation](https://github.com/DungGramer/learning/tree/node-cli-automation)
+Source: https://github.com/uidotdev/react-query-course
 
-### NestJS
-#### [NestJS for Pros](https://github.com/DungGramer/learning/tree/nestjs-for-pros)
+### Info
 
-### Monorepo
-#### [Scale React Development with Nx](https://github.com/DungGramer/learning/tree/monorepo/scale-react-development-with-nx)
-#### [Build High-Speed Monorepos with Nx and pnpm Workspaces](https://github.com/DungGramer/learning/tree/monorepo/build-high-speed-monorepos-with-nx-and-pnpm-workspaces)
+This is the repository for [ui.dev](https://ui.dev)'s "React Query" course project.
 
-### Parsers
-#### [Building a Parser from scratch](https://github.com/DungGramer/learning/tree/Building_a_Parser_from_scratch)
+For more information on the course, visit **[ui.dev/react-query](https://ui.dev/react-query)**.
 
-### React.JS
-#### [State Management in Pure React, v2](https://github.com/DungGramer/learning/tree/State_Management_in_Pure_React)  
+### Project
 
-### Redux
-#### [Redux Fundamentals (feat. React)](https://github.com/DungGramer/learning/tree/redux_fundamentals)
-#### [Redux + Toolkit](https://github.com/DungGramer/learning/tree/learn-redux/todo-app-redux)
-#### [Redux vanilla](https://github.com/DungGramer/learning/tree/learn-redux/redux-pure-js)
+This project is an app for tracking issues. The backend is fully mocked with [MSW](https://mswjs.io) - the project is building the UI and data fetching using [React Query](https://react-query.tanstack.com)
 
+You can view the final project **[here](https://react-query-issue-tracker.ui.dev)**
 
-### Vim
-#### [Vim for VSCode](https://github.com/DungGramer/learning/tree/vim_for_vscode)
+### Branches
+
+Every `(Project)` video in the course coincides with a branch in this repo. If you want to compare your code with Alex's or you just want to play around with the code, check out the different branches.
+
+Below every `(Project)` video in the course will be a direct link to both the commit for that video as well as its branch.
