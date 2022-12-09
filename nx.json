@@ -14,7 +14,7 @@
           "test",
           "e2e"
         ],
-        "accessToken": "Zjc0NTE3N2UtMTgwMS00NzE0LThiYjMtNmVmMDg4ZWRhODEyfHJlYWQtd3JpdGU="
+        "accessToken": "ZDU1YzIxOTYtY2ViNy00ZjhlLTk5NmQtMjhjNTdiYjgwZGM1fHJlYWQtd3JpdGU="
       }
     }
   },
@@ -27,25 +27,6 @@
         "production",
         "^production"
       ]
-    },
-    "test": {
-      "inputs": [
-        "default",
-        "^production",
-        "{workspaceRoot}/jest.preset.js"
-      ]
-    },
-    "e2e": {
-      "inputs": [
-        "default",
-        "^production"
-      ]
-    },
-    "lint": {
-      "inputs": [
-        "default",
-        "{workspaceRoot}/.eslintrc.json"
-      ]
     }
   },
   "namedInputs": {
@@ -54,33 +35,8 @@
       "sharedGlobals"
     ],
     "production": [
-      "default",
-      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
-      "!{projectRoot}/tsconfig.spec.json",
-      "!{projectRoot}/jest.config.[jt]s",
-      "!{projectRoot}/.eslintrc.json"
+      "default"
     ],
-    "sharedGlobals": [
-      "{workspaceRoot}/babel.config.json"
-    ]
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "style": "scss",
-        "unitTestRunner": "jest",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "scss"
-      },
-      "library": {
-        "style": "scss",
-        "unitTestRunner": "jest",
-        "linter": "eslint"
-      }
-    }
-  },
-  "defaultProject": "nxegghead"
+    "sharedGlobals": []
+  }
 }
