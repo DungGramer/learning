@@ -13,6 +13,7 @@
     "@nrwl/cypress": "15.3.0",
     "@nrwl/eslint-plugin-nx": "15.3.0",
     "@nrwl/jest": "15.3.0",
+    "@nrwl/js": "15.3.0",
     "@nrwl/linter": "15.3.0",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "15.3.0",
