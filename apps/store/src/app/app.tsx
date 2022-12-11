@@ -16,11 +16,12 @@ import { formatRating } from '@nxegghead/store/util-formatters';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import { StoreFeatureGameDetail } from '@nxegghead/store/feature-game-detail';
+import { Game } from '@nxegghead/api/util-interfaces';
 
 export const App = () => {
   const navigate = useNavigate();
   const [state, setState] = useState<{
-    data: any[];
+    data: Game[];
     loadingState: 'success' | 'error' | 'loading';
   }>({
     data: [],

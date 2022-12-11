@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { CardMedia } from '@material-ui/core';
 import { formatRating } from '@nxegghead/store/util-formatters';
+import { Game } from '@nxegghead/api/util-interfaces';
 
 /* eslint-disable-next-line */
 export interface StoreFeatureGameDetailProps {}
@@ -16,10 +17,10 @@ export function StoreFeatureGameDetail() {
   const params = useParams();
 
   const [state, setState] = useState<{
-    data: any;
+    data: Game | null;
     loadingState: 'success' | 'error' | 'loading';
   }>({
-    data: {},
+    data: null,
     loadingState: 'success',
   });
 
