@@ -13,14 +13,24 @@ import Typography from '@material-ui/core/Typography';
 
 import { formatRating } from '@nxegghead/store/util-formatters';
 
+import { Route, Routes, useNavigate } from 'react-router-dom';
+
+import { StoreFeatureGameDetail } from '@nxegghead/store/feature-game-detail';
+
 export const App = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Header />
       <div className="container">
         <div className="games-layout">
           {getAllGames().map((x) => (
-            <Card key={x.id} className="game-card">
+            <Card
+              key={x.id}
+              className="game-card"
+              onClick={() => navigate(`/game/${x.id}`)}
+            >
               <CardActionArea>
                 <CardMedia
                   className="game-card-media"
@@ -52,6 +62,10 @@ export const App = () => {
           ))}
         </div>
       </div>
+
+      <Routes>
+        <Route path="/game/:id" element={<StoreFeatureGameDetail />} />
+      </Routes>
     </>
   );
 };
