@@ -50,7 +50,8 @@
       "dependsOn": ["^build"],
       "options": {
         "buildTarget": "store:build",
-        "hmr": true
+        "hmr": true,
+        "proxyConfig": "apps/store/proxy.conf.json"
       },
       "configurations": {
         "development": {
