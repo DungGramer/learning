@@ -5,7 +5,8 @@ const readline = require('readline').createInterface({
 });
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
 
 const readmePath = path.join(__dirname, 'README.md');
 const readme = fs.readFileSync(readmePath, 'utf8');
@@ -82,7 +83,7 @@ function readContent(callback) {
   });
 }
 
-function writeContent(markdown, branch, url) {
+async function writeContent(markdown, branch, url) {
   const newReadme = [
     readme.slice(0, lineOfTopic + topic.length + 4),
     readme.slice(lineOfTopic + topic.length + 4, readme.length),
@@ -90,14 +91,61 @@ function writeContent(markdown, branch, url) {
 
   fs.writeFileSync(readmePath, newReadme);
 
-  // Create a new branch
-  exec(`git checkout -b ${branch}`, (err, stdout, stderr) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
+  // exec('git add .', (err, stdout, stderr) => {
+  //   if (err) {
+  //     console.error(err);
+  //     return;
+  //   }
+  //   console.log(stdout);
+
+  //   exec(`git commit -m "Add ${title}"`, (err, stdout, stderr) => {
+  //     if (err) {
+  //       console.error(err);
+  //       return;
+  //     }
+  //     console.log(stdout);
+
+  //     exec(`git push`, (err, stdout, stderr) => {
+  //       if (err) {
+  //         console.error(err);
+  //         return;
+  //       }
+  //       console.log(stdout);
+
+  //       exec(`git checkout -b ${branch}`, (err, stdout, stderr) => {
+  //         if (err) {
+  //           console.error(err);
+  //           return;
+  //         }
+  //         console.log(stdout);
+  //       });
+  //     });
+  //   });
+  // });
+
+  try {
+    const { stdout, stderr } = await exec('git add .');
     console.log(stdout);
-  });
+    console.log(stderr);
+
+    const { stdout: stdout2, stderr: stderr2 } = await exec(
+      `git commit -m "Add ${title}"`
+    );
+    console.log(stdout2);
+    console.log(stderr2);
+
+    const { stdout: stdout3, stderr: stderr3 } = await exec(`git push`);
+    console.log(stdout3);
+    console.log(stderr3);
+
+    const { stdout: stdout4, stderr: stderr4 } = await exec(
+      `git checkout -b ${branch}`
+    );
+    console.log(stdout4);
+    console.log(stderr4);
+  } catch (error) {
+    console.error(error);
+  }
 
   process.exit();
 }
