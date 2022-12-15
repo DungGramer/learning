@@ -20,6 +20,8 @@
 #### [Building a Parser from scratch](https://github.com/DungGramer/learning/tree/Building_a_Parser_from_scratch)
 
 ### React.JS
+#### [Deep dive into React DnD](https://github.com/DungGramer/learning/tree/react.js/deep-dive-into-react-dnd)
+
 #### [Beautiful and Accessible Drag and Drop with react-beautiful-dnd](https://github.com/DungGramer/learning/tree/react.js/beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd)
 
 #### [State Management in Pure React, v2](https://github.com/DungGramer/learning/tree/State_Management_in_Pure_React)  
