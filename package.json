@@ -1,27 +1,26 @@
 {
-  "name": "learning",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DungGramer/learning.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DungGramer/learning/issues"
-  },
-  "homepage": "https://github.com/DungGramer/learning#readme",
-  "prettier": "@dunggramer/prettier",
-  "devDependencies": {
-    "@dunggramer/prettier": "latest",
-    "eslint": "^8.11.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1"
-  }
+	"name": "chakra",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next --port 3089",
+		"build": "next build",
+		"start": "next start"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@chakra-ui/core": "^0.5.2",
+		"@emotion/core": "^10.0.27",
+		"@emotion/styled": "^10.0.27",
+		"emotion-theming": "^10.0.27",
+		"next": "^9.1.7",
+		"react": "^16.12.0",
+		"react-dnd": "^10.0.2",
+		"react-dnd-html5-backend": "^10.0.2",
+		"react-dom": "^16.12.0",
+		"react-spectrum": "^1.1.5"
+	}
 }
