@@ -15,6 +15,7 @@ const Navbar = () => {
 	const bgColor = { light: 'gray.300', dark: 'gray.600' };
 	const textColor = { light: 'black', dark: 'gray.100' };
 	const router = useRouter();
+	
 	return (
 		<Flex
 			w='100vw'
