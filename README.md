@@ -13,24 +13,24 @@
 #### [NestJS for Pros](https://github.com/DungGramer/learning/tree/nestjs-for-pros)
 
 ### Monorepo
-#### [Scale React Development with Nx](https://github.com/DungGramer/learning/tree/monorepo/scale-react-development-with-nx)
-#### [Build High-Speed Monorepos with Nx and pnpm Workspaces](https://github.com/DungGramer/learning/tree/monorepo/build-high-speed-monorepos-with-nx-and-pnpm-workspaces)
+#### [Scale React Development with Nx](https://github.com/DungGramer/learning/tree/monorepo/scale-react-development-with-nx) ✔️
+#### [Build High-Speed Monorepos with Nx and pnpm Workspaces](https://github.com/DungGramer/learning/tree/monorepo/build-high-speed-monorepos-with-nx-and-pnpm-workspaces) ✔️
 
 ### Parsers
 #### [Building a Parser from scratch](https://github.com/DungGramer/learning/tree/Building_a_Parser_from_scratch)
 
 ### React.JS
-#### [Deep dive into React DnD](https://github.com/DungGramer/learning/tree/react.js/deep-dive-into-react-dnd)
+#### [Playing around with react-dnd](https://github.com/DungGramer/learning/tree/react.js/playing-around-with-react-dnd) ✔️
 
 #### [Beautiful and Accessible Drag and Drop with react-beautiful-dnd](https://github.com/DungGramer/learning/tree/react.js/beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd)
 
 #### [State Management in Pure React, v2](https://github.com/DungGramer/learning/tree/State_Management_in_Pure_React)  
 
 ### Redux
-#### [Redux Fundamentals (feat. React)](https://github.com/DungGramer/learning/tree/redux_fundamentals)
-#### [Redux + Toolkit](https://github.com/DungGramer/learning/tree/learn-redux/todo-app-redux)
-#### [Redux vanilla](https://github.com/DungGramer/learning/tree/learn-redux/redux-pure-js)
+#### [Redux Fundamentals (feat. React)](https://github.com/DungGramer/learning/tree/redux_fundamentals) ✔️
+#### [Redux + Toolkit](https://github.com/DungGramer/learning/tree/learn-redux/todo-app-redux) ✔️
+#### [Redux vanilla](https://github.com/DungGramer/learning/tree/learn-redux/redux-pure-js) ✔️
 
 
 ### Vim
-#### [Vim for VSCode](https://github.com/DungGramer/learning/tree/vim_for_vscode)
+#### [Vim for VSCode](https://github.com/DungGramer/learning/tree/vim_for_vscode) ✔️
