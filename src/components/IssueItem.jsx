@@ -1,8 +1,8 @@
-import { GoComment, GoIssueClosed, GoIssueOpened } from "react-icons/go";
 import { Link } from "react-router-dom";
+import { GoIssueOpened, GoIssueClosed, GoComment } from "react-icons/go";
 import { relativeDate } from "../helpers/relativeDate";
 import { useUserData } from "../helpers/useUserData";
-import Label from "./Label";
+import { Label } from "./Label";
 
 export function IssueItem({
   title,
@@ -16,19 +16,18 @@ export function IssueItem({
 }) {
   const assigneeUser = useUserData(assignee);
   const createdByUser = useUserData(createdBy);
-
   return (
     <li>
       <div>
         {status === "done" || status === "cancelled" ? (
-          <GoIssueOpened style={{ color: "red" }} />
+          <GoIssueClosed style={{ color: "red" }} />
         ) : (
-          <GoIssueClosed style={{ color: "green" }} />
+          <GoIssueOpened style={{ color: "green" }} />
         )}
       </div>
       <div className='issue-content'>
         <span>
-          <Link to={`/issues/${number}`}>{title}</Link>
+          <Link to={`/issue/${number}`}>{title}</Link>
           {labels.map((label) => (
             <Label key={label} label={label} />
           ))}
@@ -52,12 +51,11 @@ export function IssueItem({
       <span className='comment-count'>
         {commentCount > 0 ? (
           <>
-            <GoComment /> {commentCount}
+            <GoComment />
+            {commentCount}
           </>
         ) : null}
       </span>
     </li>
   );
 }
-
-

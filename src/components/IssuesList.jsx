@@ -3,11 +3,12 @@ import { IssueItem } from "./IssueItem";
 
 export default function IssuesList({ labels, status }) {
   const issuesQuery = useQuery(["issues", { labels, status }], () => {
-    const statusString = status ? `&status=${status}` : '';
+    const statusString = status ? `&status=${status}` : "";
     const labelsString = labels.map((label) => `labels[]=${label}`).join("&");
-    return fetch(`/api/issues?${labelsString}${statusString}`).then((res) => res.json());
+    return fetch(`/api/issues?${labelsString}${statusString}`).then((res) =>
+      res.json()
+    );
   });
-
   return (
     <div>
       <h2>Issues List</h2>
