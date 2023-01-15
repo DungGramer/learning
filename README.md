@@ -1,38 +1,30 @@
-# My Learning
+<h1 align="center">
+  <a href="https://ui.dev">
+    <img
+      src="https://ui.dev/images/ambitious-banner-dark.jpg"
+      alt="ui.dev banner" width="600" />
+  </a>
+  <br />
+</h1>
 
-### Alogrithms
-#### [AlgoDSE](https://github.com/DungGramer/learning/tree/AlgoDSE)
-#### [JavaScript & LeetCode: The Interview Bootcamp](https://github.com/DungGramer/learning/tree/LeetCode_JS)
+<h3 align="center">React Router Course Project - <a href="https://basketball-v6.ui.dev/">Hash History Basketball League</a></h3>
 
-### Node.js
-#### [The Complete Node.js Course | Code with Mosh](https://github.com/DungGramer/learning/tree/learn-node/code-with-mosh)
-#### [Node & ExpressJS | F8](https://github.com/DungGramer/learning/tree/learn-node/f8)
-#### [Node CLI Automation](https://github.com/DungGramer/learning/tree/node-cli-automation)
+### Info
 
-### NestJS
-#### [NestJS for Pros](https://github.com/DungGramer/learning/tree/nestjs-for-pros)
+This is the repository for [ui.dev](https://ui.dev)'s "React Router" course project.
 
-### Monorepo
-#### [Scale React Development with Nx](https://github.com/DungGramer/learning/tree/monorepo/scale-react-development-with-nx) ✔️
-#### [Build High-Speed Monorepos with Nx and pnpm Workspaces](https://github.com/DungGramer/learning/tree/monorepo/build-high-speed-monorepos-with-nx-and-pnpm-workspaces) ✔️
+For more information on the course, visit __[ui.dev/react-router](https://ui.dev/react-router)__.
 
-### Parsers
-#### [Building a Parser from scratch](https://github.com/DungGramer/learning/tree/Building_a_Parser_from_scratch)
+### Project
 
-### React.JS
-#### [react router v6](https://github.com/DungGramer/learning/tree/react.js/react-router-v6)
+This project is an app for a fictional Basketball league.
 
-#### [Playing around with react-dnd](https://github.com/DungGramer/learning/tree/react.js/playing-around-with-react-dnd) ✔️
+You can view the final project __[here](https://basketball-v6.ui.dev/)__
 
-#### [Beautiful and Accessible Drag and Drop with react-beautiful-dnd](https://github.com/DungGramer/learning/tree/react.js/beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd)
+### Branches
 
-#### [State Management in Pure React, v2](https://github.com/DungGramer/learning/tree/State_Management_in_Pure_React)  
+Every `(Project)` video in the course coincides with a branch in this repo. If you want to compare your code with Tyler's or you just want to play around with the code, check out the different branches.
 
-### Redux
-#### [Redux Fundamentals (feat. React)](https://github.com/DungGramer/learning/tree/redux_fundamentals) ✔️
-#### [Redux + Toolkit](https://github.com/DungGramer/learning/tree/learn-redux/todo-app-redux) ✔️
-#### [Redux vanilla](https://github.com/DungGramer/learning/tree/learn-redux/redux-pure-js) ✔️
+Below every `(Project)` video in the course will be a direct link to both the commit for that video as well as its branch.
 
-
-### Vim
-#### [Vim for VSCode](https://github.com/DungGramer/learning/tree/vim_for_vscode) ✔️
+<img align='center' src='https://user-images.githubusercontent.com/2933430/82761769-26e15180-9dba-11ea-9681-8b453d95c9fd.png' width='200' />

@@ -1,0 +1,118 @@
+(PRACTICE) THE FUNDAMENTALS
+https://codesandbox.io/s/pt6vlg?file=%2FApp.js&from-sandpack=true
+(SOLUTION) THE FUNDAMENTALS
+https://codesandbox.io/s/is3zsv?file=%2FApp.js&from-sandpack=true
+
+https://github.com/uidotdev/react-router-course/tree/1-starter-code
+https://github.com/uidotdev/react-router-course/tree/2-initial-routes
+
+(PRACTICE) URL PARAMETERS
+https://codesandbox.io/s/p8nf3f?file=%2FApp.js&from-sandpack=true
+(SOLUTION) URL PARAMETERS
+https://codesandbox.io/s/zjuzn3?file=%2FApp.js&from-sandpack=true
+
+https://github.com/uidotdev/react-router-course/tree/3-home
+
+(PRACTICE) QUERY STRINGS
+https://codesandbox.io/s/5vmjgz?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) QUERY STRINGS
+https://codesandbox.io/s/l97vtz?file=%2FApp.js&from-sandpack=true
+
+(PROJECT) TEAM PAGE
+https://github.com/uidotdev/react-router-course/tree/e2acc2ae314ef280f36713bfb9302e606e38567c
+
+(PRACTICE) CUSTOMIZING LINK
+https://codesandbox.io/s/82iche?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) CUSTOMIZING LINK
+https://codesandbox.io/s/59sr0n?file=%2FApp.js&from-sandpack=true
+
+(PROJECT) PLAYERS
+https://github.com/uidotdev/react-router-course/tree/5-players
+
+(PRACTICE) NESTED ROUTES
+https://codesandbox.io/s/p1gppv?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) NESTED ROUTES
+https://codesandbox.io/s/gourz8?file=%2FApp.js&from-sandpack=true
+
+(PRACTICE) NESTED ROUTES - OUTLET
+https://codesandbox.io/s/t4xbxk?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) NESTED ROUTES - OUTLET
+https://codesandbox.io/s/2kcsyh?file=%2FApp.js&from-sandpack=true
+
+PROJECT - PLAYER
+https://github.com/uidotdev/react-router-course/tree/6-player
+
+(PROJECT) TEAM
+https://github.com/uidotdev/react-router-course/tree/7-team
+
+(PROJECT) ARTICLES
+https://github.com/uidotdev/react-router-course/tree/8-articles
+
+(PROJECT) LOADING
+https://github.com/uidotdev/react-router-course/tree/9-loading
+
+(PRACTICE) PROGRAMMATICALLY NAVIGATE - DECLARATIVE
+https://codesandbox.io/s/hslkcz?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) PROGRAMMATICALLY NAVIGATE (DECLARATIVE)
+https://codesandbox.io/s/t0j6jo?file=%2FApp.js&from-sandpack=true
+
+(PRACTICE) PROGRAMMATICALLY NAVIGATE - IMPERATIVE
+https://codesandbox.io/s/gbzxsz?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) PROGRAMMATICALLY NAVIGATE (IMPERATIVE)
+https://codesandbox.io/s/6khlfn?file=%2FApp.js&from-sandpack=true
+
+(PROJECT) NAVIGATE
+https://github.com/uidotdev/react-router-course/tree/10-navigate
+
+(PRACTICE) REACT.LAZY
+https://codesandbox.io/s/q00xxg?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) REACT.LAZY
+https://codesandbox.io/s/p506mg?file=%2FApp.js&from-sandpack=true
+
+(PROJECT) CODE SPLITTING
+https://github.com/uidotdev/react-router-course/tree/11-split
+
+(PRACTICE) ROUTE CONFIGS
+https://codesandbox.io/s/41z0h7?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) ROUTE CONFIG
+https://codesandbox.io/s/cdx0vb?file=%2FApp.js&from-sandpack=true
+
+(PROJECT) CONFIG
+https://github.com/uidotdev/react-router-course/tree/12-config
+
+(PRACTICE) PROTECTED ROUTES
+https://codesandbox.io/s/5fs1v8?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) PROTECTED ROUTES
+https://codesandbox.io/s/tn0qf2?file=%2FApp.js&from-sandpack=true
+
+(PRACTICE) CATCH ALL ROUTES
+https://codesandbox.io/s/b7ekcs?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) CATCH ALL ROUTES
+https://codesandbox.io/s/vezye6?file=%2FApp.js&from-sandpack=true
+
+(PRACTICE) PASSING PROPS TO LINK
+https://codesandbox.io/s/n859dr?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) PASSING PROPS TO LINK
+https://codesandbox.io/s/qdzh68?file=%2FApp.js&from-sandpack=true
+
+(PRACTICE) SIDEBARS
+https://codesandbox.io/s/oio5m3?file=%2FApp.js&from-sandpack=true
+
+(SOLUTION) SIDEBAR
+https://codesandbox.io/s/zeiuiz?file=%2FApp.js&from-sandpack=true
+
+
+
+
+
