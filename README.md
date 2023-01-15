@@ -20,6 +20,8 @@
 #### [Building a Parser from scratch](https://github.com/DungGramer/learning/tree/Building_a_Parser_from_scratch)
 
 ### React.JS
+#### [react router v6](https://github.com/DungGramer/learning/tree/react.js/react-router-v6)
+
 #### [Playing around with react-dnd](https://github.com/DungGramer/learning/tree/react.js/playing-around-with-react-dnd) ✔️
 
 #### [Beautiful and Accessible Drag and Drop with react-beautiful-dnd](https://github.com/DungGramer/learning/tree/react.js/beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd)
