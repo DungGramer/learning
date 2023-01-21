@@ -14,9 +14,6 @@ export default function IssuesList({ labels, status }) {
           "x-error": true,
         },
       });
-    },
-    {
-      staleTime: 1000 * 60, // 1 minutes
     }
   );
 
