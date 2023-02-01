@@ -14,7 +14,7 @@ export default function IssueAssignment({ assignee, issueNumber }) {
 
   const setAssignment = useMutation(
     (assignee) => {
-      fetch(`/api/issues/${issueNumber}`, {
+      return fetch(`/api/issues/${issueNumber}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -50,7 +50,7 @@ export default function IssueAssignment({ assignee, issueNumber }) {
   );
 
   return (
-    <div className='issue-options'>
+    <div className="issue-options">
       <div>
         <span>Assignment</span>
         {user.isSuccess && (
@@ -64,7 +64,7 @@ export default function IssueAssignment({ assignee, issueNumber }) {
         onClick={() => !usersQuery.isLoading && setMenuOpen((open) => !open)}
       />
       {menuOpen && (
-        <div className='picker-menu'>
+        <div className="picker-menu">
           {usersQuery.data?.map((user) => (
             <div key={user.id} onClick={() => setAssignment.mutate(user.id)}>
               <img src={user.profilePictureUrl} />
