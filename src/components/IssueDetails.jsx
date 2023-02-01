@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import { relativeDate } from "../helpers/relativeDate";
 import { useUserData } from "../helpers/useUserData";
+import IssueAssignment from "./IssueAssignment";
 import { IssueHeader } from "./IssueHeader";
 import IssueStatus from "./IssueStatus";
 
@@ -26,22 +27,22 @@ function Comment({ comment, createdBy, createdDate }) {
 
   if (userQuery.isLoading)
     return (
-      <div className='comment'>
+      <div className="comment">
         <div>
-          <div className='comment-header'>Loading...</div>
+          <div className="comment-header">Loading...</div>
         </div>
       </div>
     );
 
   return (
-    <div className='comment'>
-      <img src={userQuery.data.profilePictureUrl} alt='Commenter Avatar' />
+    <div className="comment">
+      <img src={userQuery.data.profilePictureUrl} alt="Commenter Avatar" />
       <div>
-        <div className='comment-header'>
+        <div className="comment-header">
           <span>{userQuery.data.name}</span> commented{" "}
           <span>{relativeDate(createdDate)}</span>
         </div>
-        <div className='comment-body'>{comment}</div>
+        <div className="comment-body">{comment}</div>
       </div>
     </div>
   );
@@ -53,7 +54,7 @@ export default function IssueDetails() {
   const commentsQuery = useIssueComments(number);
 
   return (
-    <div className='issue-details'>
+    <div className="issue-details">
       {issueQuery.isLoading ? (
         <p>Loading issue...</p>
       ) : (
@@ -73,6 +74,10 @@ export default function IssueDetails() {
             <aside>
               <IssueStatus
                 status={issueQuery.data.status}
+                issueNumber={issueQuery.data.number.toString()}
+              />
+              <IssueAssignment
+                assignee={issueQuery.data.assignee}
                 issueNumber={issueQuery.data.number.toString()}
               />
             </aside>
