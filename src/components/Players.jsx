@@ -3,6 +3,7 @@ import { Outlet, useLocation, useSearchParams } from 'react-router-dom';
 import usePlayerNames from '../hooks/usePlayerNames';
 import Sidebar from './Sidebar';
 import Loading from './Loading';
+import { Navigate } from 'react-router-dom';
 
 export default function Players() {
   const location = useLocation();
@@ -20,13 +21,19 @@ export default function Players() {
 
   const { response: names, loading } = usePlayerNames(team);
 
-  if (loading) return <Loading />;
+  let body;
+  if (loading) {
+    body = <Loading />;
+  } else if (team === null) {
+    body = <Navigate to="teams" />;
+  } else {
+    body = (
+      <>
+        <Sidebar title="Players" list={names} />
+        <Outlet />
+      </>
+    );
+  }
 
-  return (
-    <div className="container two-column">
-      <Sidebar title="Players" list={names} />
-
-      <Outlet />
-    </div>
-  );
+  return <div className="container two-column">{body}</div>;
 }
