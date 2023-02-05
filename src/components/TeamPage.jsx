@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import useTeamsArticles from '../hooks/useTeamsArticles';
-import useTeamNames from '../hooks/useTeamNames';
 import useTeam from '../hooks/useTeam';
-import TeamLogo from './TeamLogo';
+import useTeamNames from '../hooks/useTeamNames';
+import useTeamsArticles from '../hooks/useTeamsArticles';
 import { slugify } from '../utils';
+import Loading from './Loading';
+import TeamLogo from './TeamLogo';
 
 function useTeamPageData(teamId) {
   const { response: teamNames, loading: loadingTeamNames } = useTeamNames(teamId);
@@ -24,7 +25,7 @@ const TeamPage = () => {
 
   const { teamNames, articles, team, loading } = useTeamPageData(teamId);
 
-  if (loading) return <p>LOADING</p>;
+  if (loading) return <Loading />;
 
   if (!teamNames.includes(teamId)) {
     return <h1 className="text-center">The {teamId} is not a valid team.</h1>;
