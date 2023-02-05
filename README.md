@@ -21,7 +21,7 @@
 
 ### React.JS
 #### [Level Up With React Query](https://github.com/DungGramer/learning/tree/react.js/level-up-with-react-query) ✔️
-#### [react router v6](https://github.com/DungGramer/learning/tree/react.js/react-router-v6)
+#### [React Router v6](https://github.com/DungGramer/learning/tree/react.js/react-router-v6) ✔️
 
 #### [Playing around with react-dnd](https://github.com/DungGramer/learning/tree/react.js/playing-around-with-react-dnd) ✔️
 
