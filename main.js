@@ -15,17 +15,48 @@ const setBackground = (url, canvas) => {
   });
 };
 
-function togglePan() {
-  currentMode = currentMode === modes.pan ? '' : modes.pan;
+let currentMode;
+const modes = {
+  pan: 'pan',
+  drawing: 'drawing',
+};
+
+function toggleMode(mode) {
+  switch (mode) {
+    case modes.pan:
+      currentMode = currentMode === modes.pan ? '' : modes.pan;
+      break;
+    case modes.drawing:
+      if (currentMode === modes.drawing) {
+        canvas.isDrawingMode = false;
+        currentMode = '';
+      } else {
+        currentMode = modes.drawing;
+        canvas.isDrawingMode = true;
+
+      }
+      break;
+    default:
+      break;
+  }
+  canvas.renderAll();
+  console.log(`currentMode:`, currentMode);
 }
 
 const setPanEvents = (canvas) => {
   canvas.on('mouse:move', (event) => {
-    if (mousePressed && currentMode === modes.pan) {
-      canvas.setCursor('grab');
-      const mEvent = event.e;
-      const delta = new fabric.Point(mEvent.movementX, mEvent.movementY);
-      canvas.relativePan(delta);
+    if (!mousePressed) return;
+
+    switch (currentMode) {
+      case modes.pan:
+        canvas.setCursor('grab');
+        const mEvent = event.e;
+        const delta = new fabric.Point(mEvent.movementX, mEvent.movementY);
+        canvas.relativePan(delta);
+        break;
+      case modes.drawing:
+
+        break;
     }
   });
 
@@ -44,14 +75,11 @@ const setPanEvents = (canvas) => {
 };
 
 const togglePanBtn = document.querySelector('.toggle-pan');
-togglePanBtn.addEventListener('click', togglePan);
+togglePanBtn.addEventListener('click', () => toggleMode(modes.pan));
 
 const toggleDrawBtn = document.querySelector('.toggle-draw');
+toggleDrawBtn.addEventListener('click', () => toggleMode(modes.drawing));
 
-let currentMode;
-const modes = {
-  pan: 'pan',
-};
 const canvas = initCanvas('canvas');
 let mousePressed = false;
 
