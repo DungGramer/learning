@@ -55,7 +55,6 @@ const setPanEvents = (canvas) => {
         canvas.relativePan(delta);
         break;
       case modes.drawing:
-
         break;
     }
   });
@@ -75,41 +74,66 @@ const setPanEvents = (canvas) => {
 };
 
 const clearCanvas = (canvas) => {
-  canvas.getObjects().forEach(obj => {
+  canvas.getObjects().forEach((obj) => {
     if (obj === canvas.backgroundImage) return;
     canvas.remove(obj);
-  })
-}
+  });
+};
 
 const createRect = (canvas) => {
   const canvasCenter = canvas.getCenter();
   const rect = new fabric.Rect({
     left: canvasCenter.left,
-    top: canvasCenter.top,
-    fill: 'red',
+    top: 0,
+    fill: 'darkgreen',
     width: 100,
     height: 100,
     originX: 'center',
     originY: 'center',
     cornerColor: 'white',
-
   });
   canvas.add(rect);
-}
+  rect.animate('top', canvasCenter.top, {
+    onChange: canvas.renderAll.bind(canvas),
+  });
+  rect.on('selected', () => {
+    rect.set('fill', 'green');
+  });
+  rect.on('deselected', () => {
+    rect.set('fill', 'darkgreen');
+  });
+};
 
 const createCirc = (canvas) => {
   const canvasCenter = canvas.getCenter();
-  const circ = new fabric.Circle({
-    left: canvasCenter.left,
-    top: canvasCenter.top,
-    fill: 'red',
-    cornerColor: 'white',
+  const circle = new fabric.Circle({
     radius: 50,
+    fill: 'tomato',
+    left: canvasCenter.left,
+    top: -50,
     originX: 'center',
     originY: 'center',
+    cornerColor: 'white',
   });
-  canvas.add(circ);
-}
+  canvas.add(circle);
+  canvas.renderAll();
+  circle.animate('top', canvas.height - 50, {
+    onChange: canvas.renderAll.bind(canvas),
+    onComplete: () => {
+      circle.animate('top', canvasCenter.top, {
+        onChange: canvas.renderAll.bind(canvas),
+        easing: fabric.util.ease.easeOutBounce,
+        duration: 200,
+      });
+    },
+  });
+  circle.on('selected', () => {
+    circle.set('fill', 'red');
+  });
+  circle.on('deselected', () => {
+    circle.set('fill', 'tomato');
+  });
+};
 
 const togglePanBtn = document.querySelector('.toggle-pan');
 togglePanBtn.addEventListener('click', () => toggleMode(modes.pan));
