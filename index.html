@@ -13,8 +13,18 @@
 
     <button class="toggle-pan">Toggle Pan</button>
     <button class="toggle-draw">Toggle Drawing</button>
-
+    <input type="color" id="color-picker" />
+    <input type="text" id="color-picker-label" value="#000000" />
+    <button class="clear-canvas">Clear</button>
     <canvas id="canvas"></canvas>
+
+    <div id="objectButtonsWrapper">
+      <p id="objectsTitle">Objects</p>
+      <div id="objectButtons">
+        <button class="add-rect">React</button>
+        <button class="add-circ">Circ</button>
+      </div>
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>
