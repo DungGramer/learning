@@ -16,6 +16,7 @@
     <input type="color" id="color-picker" />
     <input type="text" id="color-picker-label" value="#000000" />
     <button class="clear-canvas">Clear</button>
+    <button class="restore-canvas">Restore</button>
     <canvas id="canvas"></canvas>
 
     <div id="objectButtonsWrapper">
@@ -24,6 +25,13 @@
         <button class="add-rect">React</button>
         <button class="add-circ">Circ</button>
       </div>
+      <button class="group">Group</button>
+      <button class="un-group">Un-group</button>
+    </div>
+
+    <div class="buttonsWrapper">
+      <p class="buttonsTitle">Image</p>
+      <input type="file" name="" id="img-input" accept="image/*" multiple />
     </div>
 
     <script type="module" src="/main.js"></script>
