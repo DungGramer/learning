@@ -16,6 +16,9 @@
 ### NestJS
 #### [NestJS for Pros](https://github.com/DungGramer/learning/tree/nestjs-for-pros)
 
+### NextJS
+
+
 ### Monorepo
 #### [Scale React Development with Nx](https://github.com/DungGramer/learning/tree/monorepo/scale-react-development-with-nx) ✔️
 #### [Build High-Speed Monorepos with Nx and pnpm Workspaces](https://github.com/DungGramer/learning/tree/monorepo/build-high-speed-monorepos-with-nx-and-pnpm-workspaces) ✔️
