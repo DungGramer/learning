@@ -14,7 +14,15 @@ const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
+/* const group = new THREE.Group();
+scene.add(group);
 
+const cube1 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({ color: 0xff0000 })
+)
+group.add(cube1);
+ */
 // position
 /* mesh.position.x = 0.7;
 mesh.position.y = -0.6;
