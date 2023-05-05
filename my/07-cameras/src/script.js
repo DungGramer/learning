@@ -12,6 +12,25 @@ window.addEventListener("mousemove", (event) => {
   cursor.y = -(event.clientY / sizes.height - 0.5); //? -0.5 to center the cursor. Minus to invert the axis
 });
 
+window.addEventListener("dblclick", () => {
+  const fullscreenElement =
+    document.fullscreenElement || document.webkitFullscreenElement;
+
+    if (!fullscreenElement) {
+        if (canvas.requestFullscreen) {
+            canvas.requestFullscreen();
+        } else if (canvas.webkitRequestFullscreen) {
+            canvas.webkitRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+});
+
 /**
  * Base
  */
@@ -23,6 +42,20 @@ const sizes = {
   width: window.innerWidth,
   height: window.innerHeight,
 };
+
+window.addEventListener("resize", () => {
+  // Update sizes
+  sizes.width = window.innerWidth;
+  sizes.height = window.innerHeight;
+
+  // Update camera
+  camera.aspect = sizes.width / sizes.height;
+  camera.updateProjectionMatrix(); //? Update the camera with the new aspect ratio
+
+  // Update renderer
+  renderer.setSize(sizes.width, sizes.height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); //? Limit the pixel ratio to 2 is enough for most devices
+});
 
 // Scene
 const scene = new THREE.Scene();
@@ -57,6 +90,7 @@ const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
 });
 renderer.setSize(sizes.width, sizes.height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); //? Limit the pixel ratio to 2 is enough for most devices
 
 // Animate
 const clock = new THREE.Clock();
