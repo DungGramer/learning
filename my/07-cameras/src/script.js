@@ -61,10 +61,32 @@ window.addEventListener("resize", () => {
 const scene = new THREE.Scene();
 
 // Object
-const mesh = new THREE.Mesh(
-  new THREE.BoxGeometry(1, 1, 1, 5, 5, 5),
-  new THREE.MeshBasicMaterial({ color: 0xff0000 })
-);
+/* const positionsArray = new Float32Array([
+    0, 0, 0, //? Vertex 1
+    0, 1, 0, //? Vertex 2
+    1, 0, 0, //? Vertex 3
+]);
+const positionsAttribute = new THREE.BufferAttribute(positionsArray, 3);
+const geometry = new THREE.BufferGeometry();
+geometry.setAttribute('position', positionsAttribute);
+const material = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
+const mesh = new THREE.Mesh(geometry, material); */
+
+const geometry = new THREE.BufferGeometry();
+const count = 50;
+const positionArray = new Float32Array(count * 3 * 3); //? 3 vertices per triangle, 3 coordinates per vertex
+for (let i = 0; i < count * 3 * 3; i++) {
+    positionArray[i] = (Math.random() - 0.5) * 4; //? -0.5 to center the object, * 4 to make it bigger
+}
+const positionsAttribute = new THREE.BufferAttribute(positionArray, 3);
+geometry.setAttribute('position', positionsAttribute);
+const material = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
+const mesh = new THREE.Mesh(geometry, material);
+
+// const mesh = new THREE.Mesh(
+//   new THREE.BoxGeometry(1, 1, 1, 5, 5, 5),
+//   new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
+// );
 scene.add(mesh);
 
 // Camera
