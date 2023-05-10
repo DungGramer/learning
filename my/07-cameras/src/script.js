@@ -1,6 +1,21 @@
 import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import * as dat from "dat.gui";
+import gsap from "gsap";
+
+/**
+ * Debug
+ */
+const gui = new dat.GUI({ hideable: false, closed: true, width: 400});
+
+const parameters = {
+  color: 0xff0000,
+  wireframe: true,
+  spin: () => {
+    gsap.to(mesh.rotation, { duration: 1, y: mesh.rotation.y + Math.PI * 2 });
+  },
+};
 
 // Cursor
 const cursor = {
@@ -16,19 +31,19 @@ window.addEventListener("dblclick", () => {
   const fullscreenElement =
     document.fullscreenElement || document.webkitFullscreenElement;
 
-    if (!fullscreenElement) {
-        if (canvas.requestFullscreen) {
-            canvas.requestFullscreen();
-        } else if (canvas.webkitRequestFullscreen) {
-            canvas.webkitRequestFullscreen();
-        }
-    } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-        }
+  if (!fullscreenElement) {
+    if (canvas.requestFullscreen) {
+      canvas.requestFullscreen();
+    } else if (canvas.webkitRequestFullscreen) {
+      canvas.webkitRequestFullscreen();
     }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
 });
 
 /**
@@ -76,11 +91,11 @@ const geometry = new THREE.BufferGeometry();
 const count = 50;
 const positionArray = new Float32Array(count * 3 * 3); //? 3 vertices per triangle, 3 coordinates per vertex
 for (let i = 0; i < count * 3 * 3; i++) {
-    positionArray[i] = (Math.random() - 0.5) * 4; //? -0.5 to center the object, * 4 to make it bigger
+  positionArray[i] = (Math.random() - 0.5) * 4; //? -0.5 to center the object, * 4 to make it bigger
 }
 const positionsAttribute = new THREE.BufferAttribute(positionArray, 3);
-geometry.setAttribute('position', positionsAttribute);
-const material = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
+geometry.setAttribute("position", positionsAttribute);
+const material = new THREE.MeshBasicMaterial(parameters);
 const mesh = new THREE.Mesh(geometry, material);
 
 // const mesh = new THREE.Mesh(
@@ -101,6 +116,14 @@ camera.position.y = 2 */
 camera.position.z = 2;
 camera.lookAt(mesh.position);
 scene.add(camera);
+
+gui.add(mesh.position, "y").min(-3).max(3).step(0.01).name("elevation");
+gui.add(mesh, "visible");
+gui.add(material, "wireframe");
+gui.addColor(parameters, "color").onChange(() => {
+  material.color.set(parameters.color);
+});
+gui.add(parameters, "spin");
 
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true; //? Smooth the camera movement
