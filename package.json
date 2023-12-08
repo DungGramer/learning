@@ -1,0 +1,11 @@
+{
+  "name": "web-storage-apis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DungGramer/learning.git",
+  "author": "DungGramer <dung.dev.gramer@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx serve"
+  }
+}
