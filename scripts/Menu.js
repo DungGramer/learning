@@ -12,9 +12,32 @@ const Menu = {
     });
   },
   load: async () => {
+    // Network First
+    const db = await Menu.openDB();
+    try {
+      // We try to fetch from the network
+      const data = await API.fetchMenu();
+      Menu.data = data;
+      console.log("Data from the network");
+      // If succeded, also update the cached version
+      db.clear("categories");
+      data.forEach((category) => db.add("categories", category));
+    } catch (e) {
+      // Network error, we go to the cache
+      if ((await db.count("categories")) > 0) {
+        Menu.data = await db.getAll("categories");
+        console.log("Data from the cache");
+      } else {
+        // No cached data is available :(
+        console.log("No data is available");
+      }
+    }
+    Menu.render();
+  },
+  loadCacheFirst: async () => {
     // Cache first
     const db = await Menu.openDB();
-    if (await db.count("categories") === 0) {
+    if ((await db.count("categories")) === 0) {
       const categories = await API.fetchMenu();
       categories.forEach((c) => db.add("categories", c));
     }
