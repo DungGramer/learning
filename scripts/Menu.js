@@ -3,7 +3,7 @@ import API from "./API.js";
 const Menu = {
   data: null,
   openDB: async () => {
-    IDBCursor.openDB("cm-menu", 1, {
+    return await idb.openDB("cm-menu", 1, {
       upgrade(db) {
         db.createObjectStore("categories", {
           keyPath: "name",
@@ -12,7 +12,14 @@ const Menu = {
     });
   },
   load: async () => {
-    Menu.data = await API.fetchMenu();
+    // Cache first
+    const db = await Menu.openDB();
+    if (await db.count("categories") === 0) {
+      const categories = await API.fetchMenu();
+      categories.forEach((c) => db.add("categories", c));
+    }
+
+    Menu.data = await db.getAll("categories");
     Menu.render();
   },
   getProductById: async (id) => {
