@@ -20,19 +20,36 @@ self.addEventListener("install", async (event) => {
   cache.addAll(assets);
 });
 
-self.addEventListener("fetch", (event) => {
-  if (event.request.url === "/order") {
-    event.respondWith(fetch("/"));
-  }
-
+self.addEventListener("fetch", async (event) => {
   event.respondWith(
     (async () => {
-      const cachedResponse = await caches.match(event.request);
-      if (cachedResponse) {
-        return cachedResponse;
-      } else {
-        return fetch(event.request);
+      try {
+        const fetchResponse = await fetch(event.request);
+        // TODO: Update the cache
+        const cache = await caches.open("cm-updateassets");
+        cache.put(event.request, fetchResponse.clone());
+        return fetchResponse;
+      } catch (e) {
+        const cachedResponse = await caches.match(event.request);
+        if (cachedResponse) return cachedResponse;
       }
     })()
   );
 });
+
+// self.addEventListener("fetch", (event) => {
+//   if (event.request.url === "/order") {
+//     event.respondWith(fetch("/"));
+//   }
+
+//   event.respondWith(
+//     (async () => {
+//       const cachedResponse = await caches.match(event.request);
+//       if (cachedResponse) {
+//         return cachedResponse;
+//       } else {
+//         return fetch(event.request);
+//       }
+//     })()
+//   );
+// });
