@@ -14,7 +14,7 @@
 #### [Micro-Frontends Course Beginner to Expert](https://github.com/DungGramer/learning/tree/architecture/micro-frontends-course-beginner-to-expert)
 
 ### Javascript
-#### [Web Storage APIs](https://github.com/DungGramer/learning/tree/javascript/web-storage-apis)
+#### [Web Storage APIs](https://github.com/DungGramer/learning/tree/javascript/web-storage-apis) ✔️
 
 
 
