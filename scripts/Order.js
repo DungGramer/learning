@@ -64,7 +64,24 @@ const Order = {
     Order.cart = [];
     Order.render();
   },
-  importCart: async () => {},
+  importCart: async () => {
+    const [handle] = await window.showOpenFilePicker();
+    const file = await handle.getFile();
+
+    try {
+      const text = await file.text();
+      const json = JSON.parse(text);
+      if (json instanceof Array && json.length > 0) {
+        Order.cart = json;
+        Order.render();
+      } else {
+        alert("File is invalid");
+      }
+    } catch (e) {
+      alert("Error reading file");
+      console.error(e);
+    }
+  },
   exportCart: async () => {
     const handle = await window.showSaveFilePicker({
       types: [
