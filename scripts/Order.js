@@ -15,12 +15,11 @@ const Order = {
 
     if (cart) {
       try {
-        Order.cart = JSON.parse(cart);        
+        Order.cart = JSON.parse(cart);
         Order.render();
       } catch (error) {
-        console.error('Data corrupted');
+        console.error("Data corrupted");
       }
-
     }
   },
   save: async () => {
@@ -65,46 +64,72 @@ const Order = {
     Order.cart = [];
     Order.render();
   },
+  importCart: async () => {},
+  exportCart: async () => {
+    const handle = await window.showSaveFilePicker({
+      types: [
+        {
+          description: "JSON CoffeeMasters Cart File",
+          accept: { "application/json": [".json", ".txt", ".cart"] },
+        },
+      ],
+    });
+
+    const file = await handle.getFile(); // It's for read-only
+    const writable = await file.createWritable(); // It's for writing
+    await writable.write(JSON.stringify(Order.cart));
+    await writable.close();
+  },
   render: () => {
     Order.save();
 
     if (Order.cart.length == 0) {
       document.querySelector("#order").innerHTML = `
-                <p class="empty">Your order is empty</p>
-            `;
+        <p class="empty">Your order is empty</p>
+      `;
     } else {
       let html = `
-                <h2>Your Order</h2>
-                <ul>
-            `;
+        <h2>Your Order</h2>
+        <ul>
+      `;
       let total = 0;
       for (let prodInCart of Order.cart) {
         html += `
-                    <li>
-                        <p class='qty'>${prodInCart.quantity}x</p>
-                        <p class='name'>${prodInCart.product.name}</p>
-                        <p class='price'>$${prodInCart.product.price.toFixed(
-                          2
-                        )}</p>
-                        <p class='toolbar'>
-                            <span class="navlink material-symbols-outlined" onclick="Order.remove(${
-                              prodInCart.product.id
-                            })">
-                                delete
-                            </span>
-                        </p>
-                    </li>
-                `;
+          <li>
+            <p class='qty'>${prodInCart.quantity}x</p>
+            <p class='name'>${prodInCart.product.name}</p>
+            <p class='price'>$${prodInCart.product.price.toFixed(2)}</p>
+            <p class='toolbar'>
+                <span class="navlink material-symbols-outlined" onclick="Order.remove(${
+                  prodInCart.product.id
+                })">
+                    delete
+                </span>
+            </p>
+          </li>
+        `;
+        if (window.showOpenFilePicker) {
+          html += `
+            <a class="navlink material-symbols-outlined" 
+              href="javascript:Order.importCart()" style="color: var(--primaryColor")>
+              file_upload
+            </a>
+            <a class="navlink material-symbols-outlined"  
+              href="javascript:Order.exportCart()" style="color: var(--primaryColor")>
+              file_download
+            </a>
+          `;
+        }
         total += prodInCart.quantity * prodInCart.product.price;
       }
       html += `
-                        <li>
-                            <p class='total'>Total</p>
-                            <p class='price-total'>$${total.toFixed(2)}</p>
-                        </li>
-                    </ul>
-                     <button onclick="Order.place()">Place Order</button>
-                    `;
+          <li>
+            <p class='total'>Total</p>
+            <p class='price-total'>$${total.toFixed(2)}</p>
+          </li>
+      </ul>
+        <button onclick="Order.place()">Place Order</button>
+      `;
       document.querySelector("#order").innerHTML = html;
     }
   },
