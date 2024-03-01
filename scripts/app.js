@@ -16,7 +16,7 @@ navigator.serviceWorker.register("/serviceworker.js");
 
 (async function () {
   if (navigator.storage && navigator.storage.estimate) {
-    const q = await navigator.storage.estimate;
+    const q = await navigator.storage.estimate();
     console.log(`Quota available: ${q.quota / 1024 / 1024}MiB`);
     console.log(`Quota used: ${q.usage / 1024}KiB`);
   }
