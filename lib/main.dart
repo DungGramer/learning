@@ -40,8 +40,11 @@ class MyApp extends StatelessWidget {
       providers: [
         // Auth Cubit
         BlocProvider<AuthCubit>(
-          create: (context) =>
-              AuthCubit(authRepo: firebaseAuthRepo)..checkAuth(),
+          create: (context) {
+            // Initialize Google Sign-In
+            firebaseAuthRepo.initializeGoogleSignIn();
+            return AuthCubit(authRepo: firebaseAuthRepo)..checkAuth();
+          },
         ),
       ],
 

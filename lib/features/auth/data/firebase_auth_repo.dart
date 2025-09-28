@@ -12,6 +12,35 @@ class FirebaseAuthRepo implements AuthRepo {
   // Access to firebase
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 
+  // Google Sign-In singleton instance
+  final GoogleSignIn _googleSignIn = GoogleSignIn.instance;
+
+  // Flag to track if GoogleSignIn has been initialized
+  bool _googleSignInInitialized = false;
+
+  // Initialize Google Sign-In (call this once when the app starts)
+  Future<void> initializeGoogleSignIn() async {
+    if (!_googleSignInInitialized) {
+      await _googleSignIn.initialize();
+      _googleSignInInitialized = true;
+    }
+  }
+
+  // Clear Google Sign-In authorization tokens and cache
+  Future<void> clearGoogleSignInCache() async {
+    try {
+      if (_googleSignInInitialized) {
+        // First try to sign out, which should clear most cache
+        await _googleSignIn.signOut();
+
+        // If we have a way to get current access tokens, we could clear them specifically
+        // But for now, signing out should be sufficient
+      }
+    } catch (e) {
+      print('Failed to clear Google Sign-In cache: $e');
+    }
+  }
+
   @override
   Future<AppUser?> loginWithEmailPassword(String email, String password) async {
     try {
@@ -78,6 +107,12 @@ class FirebaseAuthRepo implements AuthRepo {
   @override
   Future<void> logout() async {
     try {
+      // Sign out from Google Sign-In if initialized
+      if (_googleSignInInitialized) {
+        await _googleSignIn.signOut();
+      }
+
+      // Sign out from Firebase
       await firebaseAuth.signOut();
     } catch (e) {
       throw Exception('Logout failed: $e');
@@ -129,39 +164,97 @@ class FirebaseAuthRepo implements AuthRepo {
   @override
   Future<AppUser?> signInWithGoogle() async {
     try {
-      // Begin the interactive sign-in process
-      final GoogleSignInAccount? gUser = await GoogleSignIn().signIn();
+      // Initialize Google Sign-In if not already initialized
+      await initializeGoogleSignIn();
 
-      // user cancelled the sign-in
-      if (gUser == null) return null;
+      GoogleSignInAccount? gUser;
 
-      // Obtain the auth details from the request
-      final GoogleSignInAuthentication gAuth = await gUser.authentication;
+      // Try lightweight authentication first
+      final lightweightResult = _googleSignIn.attemptLightweightAuthentication();
+      if (lightweightResult != null) {
+        try {
+          await lightweightResult;
+          // Check if we have a current user after lightweight auth
+          // In 7.x, we should listen to authenticationEvents, but for simplicity
+          // we'll proceed to explicit authentication
+        } catch (e) {
+          print('Lightweight authentication failed: $e');
+        }
+      }
 
-      // Create a credential for the user
+      // Check platform support and authenticate
+      if (!_googleSignIn.supportsAuthenticate()) {
+        throw Exception('This platform does not support the authenticate method. You may need platform-specific implementation.');
+      }
+
+      // Attempt authentication with error handling
+      try {
+        final GoogleSignInAccount? authenticatedUser = await _googleSignIn.authenticate();
+
+        // Check if user cancelled
+        if (authenticatedUser == null) {
+          print('User cancelled Google Sign-In');
+          return null;
+        }
+
+        gUser = authenticatedUser;
+      } on GoogleSignInException catch (e) {
+        // Handle authentication re-auth failure specifically
+        if (e.code == GoogleSignInExceptionCode.canceled) {
+          print('Authentication cancelled or re-auth failed. Attempting to clear cache and retry...');
+
+          // Try to clear the cache to fix re-auth issues
+          await clearGoogleSignInCache();
+
+          // Return null to indicate user cancellation/failure
+          return null;
+        }
+        print('GoogleSignInException during authentication: $e');
+        rethrow;
+      } catch (e) {
+        print('Authentication failed: $e');
+        rethrow;
+      }
+
+      // Get authentication data
+      final GoogleSignInAuthentication gAuth = gUser.authentication;
+
+      if (gAuth.idToken == null) {
+        throw Exception('Failed to get ID token from Google Sign-In');
+      }
+
+      // Create Firebase credential with just the ID token initially
+      // The access token might not be needed for Firebase authentication
       final credential = GoogleAuthProvider.credential(
-        accessToken: gAuth.accessToken,
         idToken: gAuth.idToken,
+        // accessToken can be null for Firebase auth if we only need ID token
+        accessToken: null,
       );
 
-      // Sign in with these credentials
+      // Sign in with Firebase
       UserCredential userCredential = await firebaseAuth.signInWithCredential(
         credential,
       );
 
-      // Firebase user
       final firebaseUser = userCredential.user;
+      if (firebaseUser == null) {
+        throw Exception('Firebase authentication failed');
+      }
 
-      // User cancelled the sign-in
-      if (firebaseUser == null) return null;
-
-      AppUser user = AppUser(
+      return AppUser(
         uid: firebaseUser.uid,
         email: firebaseUser.email ?? '',
       );
 
-      return user;
+    } on GoogleSignInException catch (e) {
+      if (e.code == GoogleSignInExceptionCode.canceled) {
+        print('User cancelled Google Sign-In');
+        return null;
+      }
+      print('GoogleSignInException: $e');
+      throw Exception('Google Sign-In failed: ${e.toString()}');
     } catch (e) {
+      print('Sign-in error: $e');
       throw Exception('Sign in with Google failed: $e');
     }
   }

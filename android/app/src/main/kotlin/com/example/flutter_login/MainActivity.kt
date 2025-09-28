@@ -1,4 +1,4 @@
-package com.dunggramer.flutter_login
+package com.dunggramer.flutterlogin
 
 import io.flutter.embedding.android.FlutterActivity
 

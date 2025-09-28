@@ -12,7 +12,12 @@
           "package_name": "com.dunggramer.flutter_login"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1013656648337-2n89m59l50ok3uqd5cijib4l3scdkcju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCxEecSoA7cv-fMqvYePt4i7o0vpnUya6k"
@@ -20,18 +25,35 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013656648337-2n89m59l50ok3uqd5cijib4l3scdkcju.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013656648337-6rjl72kbtv2l6jmslbdpjobjobm9qdqk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterLogin"
+              }
+            }
+          ]
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1013656648337:android:b2dd7e55680175e11a5d30",
+        "mobilesdk_app_id": "1:1013656648337:android:2a2e0fa96aa5aa801a5d30",
         "android_client_info": {
-          "package_name": "com.example.flutter_login"
+          "package_name": "com.dunggramer.flutterlogin"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1013656648337-2n89m59l50ok3uqd5cijib4l3scdkcju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCxEecSoA7cv-fMqvYePt4i7o0vpnUya6k"
@@ -39,7 +61,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013656648337-2n89m59l50ok3uqd5cijib4l3scdkcju.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013656648337-6rjl72kbtv2l6jmslbdpjobjobm9qdqk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterLogin"
+              }
+            }
+          ]
         }
       }
     }
