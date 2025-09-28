@@ -56,7 +56,11 @@ class AuthCubit extends Cubit<AuthStates> {
   Future<void> register(String name, String email, String password) async {
     try {
       emit(AuthLoading());
-      final user = await authRepo.registerWithEmailPassword(name, email, password);
+      final user = await authRepo.registerWithEmailPassword(
+        name,
+        email,
+        password,
+      );
       if (user != null) {
         _currentUser = user;
         emit(Authenticated(user));
@@ -92,6 +96,40 @@ class AuthCubit extends Cubit<AuthStates> {
       emit(AuthLoading());
       await authRepo.deleteAccount();
       emit(Unauthenticated());
+    } catch (e) {
+      emit(AuthError(e.toString()));
+      emit(Unauthenticated());
+    }
+  }
+
+  // Apple Sign-In
+  Future<void> signInWithApple() async {
+    try {
+      emit(AuthLoading());
+      final user = await authRepo.signInWithApple();
+      if (user != null) {
+        _currentUser = user;
+        emit(Authenticated(user));
+      } else {
+        emit(Unauthenticated());
+      }
+    } catch (e) {
+      emit(AuthError(e.toString()));
+      emit(Unauthenticated());
+    }
+  }
+
+  // Google Sign-In
+  Future<void> signInWithGoogle() async {
+    try {
+      emit(AuthLoading());
+      final user = await authRepo.signInWithGoogle();
+      if (user != null) {
+        _currentUser = user;
+        emit(Authenticated(user));
+      } else {
+        emit(Unauthenticated());
+      }
     } catch (e) {
       emit(AuthError(e.toString()));
       emit(Unauthenticated());
