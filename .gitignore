@@ -1,72 +1,45 @@
-# Code
-/node_modules
-.eslintcache
-
-### macOS ###
-# General
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must end with two \r
-Icon
-
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Local History for Visual Studio Code
-.history/
-
-# Built Visual Studio Code Extensions
-*.vsix
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
+.atom/
+.build/
+.buildlog/
 .history
-.ionide
+.svn/
+.swiftpm/
+migrate_working_dir/
 
-# Support for Project snippet scope
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
 
-### Windows ###
-# Windows thumbnail cache files
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
 
-# Dump file
-*.stackdump
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
 
-# Folder config file
-[Dd]esktop.ini
+# Symbolication related
+app.*.symbols
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Obfuscation related
+app.*.map.json
 
-# Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
