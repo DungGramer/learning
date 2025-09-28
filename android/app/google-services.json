@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1013656648337",
+    "project_id": "blm-app-30387",
+    "storage_bucket": "blm-app-30387.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013656648337:android:b9377bb78ca4ca9b1a5d30",
+        "android_client_info": {
+          "package_name": "com.dunggramer.flutter_login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxEecSoA7cv-fMqvYePt4i7o0vpnUya6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013656648337:android:b2dd7e55680175e11a5d30",
+        "android_client_info": {
+          "package_name": "com.example.flutter_login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxEecSoA7cv-fMqvYePt4i7o0vpnUya6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
